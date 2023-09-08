@@ -8,11 +8,11 @@ const InputForm = props => {
   const [startDate, setStartDate] = useState();
   const [endDate, setEndDate] = useState();
 
-  const handleSubmit = (event, range) => {
+  const handleSubmit = event => {
 
     event.preventDefault();
 
-    const [startDate, endDate] = range;
+    //const [startDate, endDate] = range;
     setStartDate(startDate);
     setEndDate(endDate);
 
@@ -35,7 +35,7 @@ const InputForm = props => {
                         onChange={event => props.setDestinationAirport(event.target.value)} />
         Dates: <DatePicker selected={startDate} 
                         placeholderText="Select Dates Range" 
-                        onChange={(event, range) => handleSubmit(event, range)}
+                        onChange={ handleSubmit()}
                         startDate={startDate}
                         endDate={endDate}
                         selectsRange />
