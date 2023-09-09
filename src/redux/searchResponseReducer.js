@@ -1,4 +1,4 @@
-export const getSearchResponse = (state) => state.searchString;
+export const getSearchResponse = (state) => state.searchResponse;
 
 const createActionName = actionName => `app/lists/${actionName}`;
 const UPDATE_SEARCH_RESPONSE = createActionName('UPDATE_SEARCH_RESPONSE');

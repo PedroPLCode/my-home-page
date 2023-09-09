@@ -1,4 +1,4 @@
-export const getOriginAirport = (state) => state.searchString;
+export const getOriginAirport = (state) => state.originAirport;
 
 const createActionName = actionName => `app/lists/${actionName}`;
 const UPDATE_ORIGIN_AIRPORT = createActionName('UPDATE_ORIGIN_AIRPORT');

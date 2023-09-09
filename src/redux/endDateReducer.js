@@ -1,4 +1,4 @@
-export const getEndDate = (state) => state.searchString;
+export const getEndDate = (state) => state.endDate;
 
 const createActionName = actionName => `app/lists/${actionName}`;
 const UPDATE_END_DATE = createActionName('UPDATE_END_DATE');

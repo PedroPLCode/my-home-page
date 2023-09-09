@@ -1,4 +1,4 @@
-export const getStartDate = (state) => state.searchString;
+export const getStartDate = (state) => state.startDate;
 
 const createActionName = actionName => `app/lists/${actionName}`;
 const UPDATE_START_DATE = createActionName('UPDATE_START_DATE');
