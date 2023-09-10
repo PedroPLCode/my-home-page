@@ -1,4 +1,7 @@
-import FlightSearch from './components/FlightSearch/FlightSearch'
+import Container from './components/Container/Container';
+import FlightSearch from './components/FlightSearch/FlightSearch';
+import NavBar from './components/NavBar/NavBar';
+import Footer from './components/Footer/Footer';
 //import { Routes, Route } from 'react-router-dom';
 //import Container from './components/Container/Container'
 //import NavBar from './components/NavBar/NavBar';
@@ -6,10 +9,11 @@ import FlightSearch from './components/FlightSearch/FlightSearch'
 const App = () => {
   return (
     <main>
-      <header>
-        <h2>Flight Search App</h2>
-      </header>
-      <FlightSearch />
+      <NavBar />
+      <Container>
+        <FlightSearch />
+      </Container>
+      <Footer />
     </main>
   );
 }

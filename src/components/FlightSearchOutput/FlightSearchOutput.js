@@ -23,7 +23,6 @@ const FlightSearchOutput = () => {
   //console.log('searchResponse from store', searchResponse);
 
   const searchFlights = async (originAirport, destinationAirport, startDate, endDate) => {
-
     const url = `https://flight-info-api.p.rapidapi.com/schedules?version=v1&DepartureDate=${startDate}&ArrivalDate=${endDate}&DepartureAirport=${originAirport}&ArrivalAirport=${destinationAirport}`;
     const options = {
       method: 'GET',
@@ -32,7 +31,6 @@ const FlightSearchOutput = () => {
         'X-RapidAPI-Host': 'flight-info-api.p.rapidapi.com'
       }
     };
-    
     try {
       const response = await fetch(url, options);
       const result = await response.text();
@@ -40,12 +38,11 @@ const FlightSearchOutput = () => {
     } catch (error) {
       console.error(error);
     }
-
     try {
 	    const response = await fetch(url, options);
 	    const result = await response.text();
 	    console.log(result);
-      dispatch(updateOriginAirport(result));
+      dispatch(updateSearchResponse(result));
     } catch (error) {
 	    console.error(error);
       return error;
@@ -61,9 +58,8 @@ const FlightSearchOutput = () => {
         <p>destination airport: {destinationAirport}</p>
         <p>start date: {startDate}</p>
         <p>end date: {endDate}</p>
-        <h4>Search Results API:</h4>
+        <h4>Search Results API request:</h4>
         <button onClick={searchFlights}>SEARCH</button>
-        <p>{searchFlights().toString()}</p>
         <p>{searchResponse}</p>
       </div>
     </div>

@@ -8,8 +8,7 @@ import { updateStartDate, getStartDate } from '../../redux/startDateReducer';
 import { updateEndDate, getEndDate } from '../../redux/endDateReducer';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-
-// Jeden input date range czy dwa start i end ?
+import styles from './FlightSearchInput.module.scss';
 
 // CSS Modules, react-datepicker-cssmodules.css
 // import 'react-datepicker/dist/react-datepicker-cssmodules.css';
@@ -21,8 +20,8 @@ const FlightSearchInput = () => {
   //  dispatch(updateOriginAirport(''));
   //}, [] );
 
-  const [dateRange, setDateRange] = useState([null, null]);
-  const [startDate, endDate] = dateRange;
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
 
   const handleSearch = event => {
     event.preventDefault();
@@ -41,27 +40,47 @@ const FlightSearchInput = () => {
   }
 
   return (
-    <div>
+    <div className={styles.flight_search_input}>
       <h3>InputForm component</h3>  
-      <form onSubmit={handleSearch}>
-        Origin Airport: <input type="text" 
-                        placeholder="Select origin Airport..." />
-        Destination Airport: <input type="text" 
-                        placeholder="Select destination Airport..." />
-        Dates Range: <DatePicker
-                        placeholderText="Select a date range..."
-                        selectsRange={true}
-                        startDate={startDate}
-                        endDate={endDate}
-                        minDate={new Date()}
-                        monthsShown={1}
-                        onChange={(update) => {setDateRange(update)}}
-                        isClearable={true}
-                        dateFormat="MMMM d, yyyy"
-                        todayButton="Set Today"
-                        /* withPortal */
-                        showWeekNumbers />
-        <button>Search For Flights</button>
+      <form className={styles.flight_search_input_form} onSubmit={handleSearch}>
+        <div className={styles.flight_search_input_div}>
+          Origin Airport: 
+          <input type="text" placeholder="Input origin Airport..." />
+        </div>
+        <div className={styles.flight_search_input_div}>
+          Destination Airport: 
+          <input type="text" placeholder="Input destination Airport..." />
+        </div>
+        <div className={styles.flight_search_input_div}>
+          Start Date: 
+          <DatePicker
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+            selectsStart
+            startDate={startDate}
+            endDate={endDate}
+            placeholderText="Select start date..."
+            showWeekNumbers 
+            todayButton="Set Today"
+            dateFormat="MMMM d, yyyy"
+            isClearable={true} />
+        </div>
+        <div className={styles.flight_search_input_div}>
+          End Date:
+          <DatePicker
+            selected={endDate}
+            onChange={(date) => setEndDate(date)}
+            selectsEnd
+            startDate={startDate}
+            endDate={endDate}
+            minDate={startDate}
+            placeholderText="Select end date..."
+            showWeekNumbers 
+            todayButton="Set Today"
+            dateFormat="MMMM d, yyyy"
+            isClearable={true} />      
+        </div>      
+        <button className={styles.flight_search_input_button}>Search For Flights</button>
       </form>
     </div>
   );

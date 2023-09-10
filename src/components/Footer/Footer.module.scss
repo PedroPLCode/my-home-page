@@ -1,0 +1,36 @@
+@import '../../styles/settings.scss';
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: ($base-size / 3) ($base-size * 4) ($base-size) ($base-size * 4);
+  background-color: darken($color-dark, 3%);
+
+  a {
+    height: $base-size * 3;
+    color: $color-light;
+    transition: $transition;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $base-size;
+    text-decoration: none;
+    padding-right: $base-size;
+
+    i:first-of-type {
+      font-size: $base-size * 2;
+    }
+
+    i {
+      font-size: $base-size * 1.5;
+      width: $base-size;
+      height: $base-size;
+    }
+  }
+
+  a:hover {
+    transform: scale(1.2);
+  }
+}
