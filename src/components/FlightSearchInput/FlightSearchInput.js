@@ -41,11 +41,11 @@ const FlightSearchInput = () => {
       <h3>FlightSearchInput component</h3>  
       <form className="d-flex flex-column justify-content-center align-items-center gap-4">
         <div className="d-flex flex-row justify-content-between align-items-between gap-2">
-          <h5>Origin Airport</h5> 
+          <h5>Origin Airport IATA Code</h5> 
           <input type="text" placeholder="Input origin Airport..." onChange={event => dispatch(updateOriginAirport(event.target.value))}/>
         </div>
         <div className="d-flex flex-row justify-content-between align-items-between gap-2">
-          <h5>Destination Airport</h5>
+          <h5>Destination Airport IATA Code</h5>
           <input type="text" placeholder="Input destination Airport..." onChange={event => dispatch(updateDestinationAirport(event.target.value))}/>
         </div>
         <div className="d-flex flex-row justify-content-between align-items-between gap-2">
@@ -59,7 +59,7 @@ const FlightSearchInput = () => {
             placeholderText="Select start date..."
             showWeekNumbers 
             todayButton="Set Today"
-            dateFormat="MMMM d, yyyy" />
+            dateFormat="yyyy-MM-dd" />
         </div>
         <div className="d-flex flex-row justify-content-between align-items-between gap-2">
           <h5>End Date</h5>
@@ -73,7 +73,7 @@ const FlightSearchInput = () => {
             placeholderText="Select end date..."
             showWeekNumbers 
             todayButton="Set Today"
-            dateFormat="MMMM d, yyyy" />      
+            dateFormat="yyyy-MM-dd" />      
         </div>      
       </form>
       <Link className='col-12 d-flex flex-row justify-content-center align-items-center' to={`/output`}>

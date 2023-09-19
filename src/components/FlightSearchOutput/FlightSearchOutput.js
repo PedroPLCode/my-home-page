@@ -17,6 +17,8 @@ const FlightSearchOutput = () => {
   const endDate = useSelector(state => getEndDate(state));
   const searchResponse = useSelector(state => getSearchResponse(state));
 
+  //YYYY-MM-DDTHH:MM
+
   const searchFlights = async (originAirport, destinationAirport, startDate, endDate) => {
     const url = `https://flight-info-api.p.rapidapi.com/schedules?version=v1&DepartureDate=${startDate}&ArrivalDate=${endDate}&DepartureAirport=${originAirport}&ArrivalAirport=${destinationAirport}`;
     const options = {
