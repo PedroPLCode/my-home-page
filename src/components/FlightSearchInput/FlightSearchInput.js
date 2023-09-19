@@ -9,6 +9,8 @@ import { updateEndDate, getEndDate } from '../../redux/endDateReducer';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import styles from './FlightSearchInput.module.scss';
+import { Link } from 'react-bootstrap';
+import { Button } from "react-bootstrap";
 
 // CSS Modules, react-datepicker-cssmodules.css
 // import 'react-datepicker/dist/react-datepicker-cssmodules.css';
@@ -80,7 +82,11 @@ const FlightSearchInput = () => {
             dateFormat="MMMM d, yyyy"
             isClearable={true} />      
         </div>      
-        <button className={styles.flight_search_input_button}>Search For Flights</button>
+        <Link className='col-3 d-flex flex-row justify-content-start align-items-start' to={`/output`}>
+          <Button className='col-4 mt-4' variant="primary">
+            SEARCH
+          </Button>
+        </Link>
       </form>
     </div>
   );

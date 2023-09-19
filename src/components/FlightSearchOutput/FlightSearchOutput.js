@@ -19,7 +19,7 @@ const FlightSearchOutput = () => {
   //console.log('startDate from store', startDate);
   const endDate = useSelector(state => getEndDate(state));
   //console.log('endDate from store', endDate);
-  const searchResponse = useSelector(state => getSearchResponse(state));
+  //const searchResponse = useSelector(state => getSearchResponse(state));
   //console.log('searchResponse from store', searchResponse);
 
   const searchFlights = async (originAirport, destinationAirport, startDate, endDate) => {
@@ -48,6 +48,8 @@ const FlightSearchOutput = () => {
       return error;
     }
   }
+  const searchResponse = useSelector(state => getSearchResponse(state));
+
 
   return (
     <div>

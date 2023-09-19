@@ -1,8 +1,9 @@
 import Container from './components/Container/Container';
-import FlightSearch from './components/FlightSearch/FlightSearch';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
-//import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import FlightSearchInput from './components/FlightSearchInput/FlightSearchInput';
+import FlightSearchOutput from './components/FlightSearchOutput/FlightSearchOutput';
 //import Container from './components/Container/Container'
 //import NavBar from './components/NavBar/NavBar';
 
@@ -11,7 +12,11 @@ const App = () => {
     <main>
       <NavBar />
       <Container>
-        <FlightSearch />
+      <Routes>
+          <Route path="/" element={<FlightSearchInput />} />
+          <Route path="/output" element={<FlightSearchOutput />} />
+          <Route path="*" element={<FlightSearchInput />} />
+        </Routes>
       </Container>
       <Footer />
     </main>
@@ -19,13 +24,3 @@ const App = () => {
 }
 
 export default App;
-
-/*
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/favorite" element={<Favorite />} />
-          <Route path="/list/:listId" element={<List />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-*/
