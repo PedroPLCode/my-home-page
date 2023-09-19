@@ -12,15 +12,10 @@ const FlightSearchOutput = () => {
   const dispatch = useDispatch();
 
   const originAirport = useSelector(state => getOriginAirport(state));
-  //console.log('originAirport from store', originAirport);
   const destinationAirport = useSelector(state => getDestinationAirport(state));
-  //console.log('destinationAirport from store', destinationAirport);
   const startDate = useSelector(state => getStartDate(state));
-  //console.log('startDate from store', startDate);
   const endDate = useSelector(state => getEndDate(state));
-  //console.log('endDate from store', endDate);
-  //const searchResponse = useSelector(state => getSearchResponse(state));
-  //console.log('searchResponse from store', searchResponse);
+  const searchResponse = useSelector(state => getSearchResponse(state));
 
   const searchFlights = async (originAirport, destinationAirport, startDate, endDate) => {
     const url = `https://flight-info-api.p.rapidapi.com/schedules?version=v1&DepartureDate=${startDate}&ArrivalDate=${endDate}&DepartureAirport=${originAirport}&ArrivalAirport=${destinationAirport}`;
@@ -48,20 +43,21 @@ const FlightSearchOutput = () => {
       return error;
     }
   }
-  const searchResponse = useSelector(state => getSearchResponse(state));
+  searchFlights();
 
-
+  if (!searchResponse) {}
   return (
-    <div>
+    <div className="m-5 d-flex flex-column justify-content-center align-items-center gap-4">
       <h3>FlightSearchOutput component</h3>  
-      <div>
-        <h4>Search Results: under construction</h4>
-        <p>origin airport: {originAirport}</p>
-        <p>destination airport: {destinationAirport}</p>
-        <p>start date: {startDate}</p>
-        <p>end date: {endDate}</p>
-        <h4>Search Results API request:</h4>
-        <button onClick={searchFlights}>SEARCH</button>
+      <div className="d-flex flex-column justify-content-center align-items-center">
+        <h4>Search Parameters</h4>
+        <p><strong>origin airport:</strong> {originAirport}</p>
+        <p><strong>destination airport:</strong> {destinationAirport}</p>
+        <p><strong>start date:</strong> {startDate}</p>
+        <p><strong>end date:</strong> {endDate}</p>
+      </div>
+      <div className="d-flex flex-column justify-content-center align-items-center">
+        <h4>Search Results</h4>
         <p>{searchResponse}</p>
       </div>
     </div>

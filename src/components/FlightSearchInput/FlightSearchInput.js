@@ -8,8 +8,7 @@ import { updateStartDate, getStartDate } from '../../redux/startDateReducer';
 import { updateEndDate, getEndDate } from '../../redux/endDateReducer';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import styles from './FlightSearchInput.module.scss';
-import { Link } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { Button } from "react-bootstrap";
 
 // CSS Modules, react-datepicker-cssmodules.css
@@ -24,54 +23,49 @@ const FlightSearchInput = () => {
 
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+  dispatch(updateStartDate(startDate.toString()));
+  dispatch(updateEndDate(endDate.toString()));
 
-  const handleSearch = event => {
-    event.preventDefault();
-    const newOriginAirport = event.target[0].value;
-    dispatch(updateOriginAirport(newOriginAirport));
-    //console.log('input value', newOriginAirport);
-    const newDestinationAirport = event.target[1].value;
-    dispatch(updateDestinationAirport(newDestinationAirport));
-    //console.log('input value', newDestinationAirport);
-    const newStartDate = startDate.toString();
-    dispatch(updateStartDate(newStartDate));
-    //console.log('input value', newStartDate);
-    const newEndDate = endDate.toString();
-    dispatch(updateEndDate(newEndDate));
-    //console.log('input value', newEndDate);
+  const handleUpdateStartDate = date => {
+    setStartDate(date);
+    dispatch(updateStartDate(startDate.toString()));
+  }
+
+  const handleUpdateEndDate = date => {
+    setEndDate(date);
+    dispatch(updateEndDate(endDate.toString()));
   }
 
   return (
-    <div className={styles.flight_search_input}>
-      <h3>InputForm component</h3>  
-      <form className={styles.flight_search_input_form} onSubmit={handleSearch}>
-        <div className={styles.flight_search_input_div}>
-          Origin Airport: 
-          <input type="text" placeholder="Input origin Airport..." />
+    <div className="m-5 d-flex flex-column justify-content-center align-items-center gap-4">
+      <h3>FlightSearchInput component</h3>  
+      <form className="d-flex flex-column justify-content-center align-items-center gap-4">
+        <div className="d-flex flex-row justify-content-between align-items-between gap-2">
+          <h5>Origin Airport</h5> 
+          <input type="text" placeholder="Input origin Airport..." onChange={event => dispatch(updateOriginAirport(event.target.value))}/>
         </div>
-        <div className={styles.flight_search_input_div}>
-          Destination Airport: 
-          <input type="text" placeholder="Input destination Airport..." />
+        <div className="d-flex flex-row justify-content-between align-items-between gap-2">
+          <h5>Destination Airport</h5>
+          <input type="text" placeholder="Input destination Airport..." onChange={event => dispatch(updateDestinationAirport(event.target.value))}/>
         </div>
-        <div className={styles.flight_search_input_div}>
-          Start Date: 
+        <div className="d-flex flex-row justify-content-between align-items-between gap-2">
+          <h5>Start Date</h5>
           <DatePicker
             selected={startDate}
-            onChange={(date) => setStartDate(date)}
+            onChange={(date) => handleUpdateStartDate(date)}
             selectsStart
             startDate={startDate}
             endDate={endDate}
             placeholderText="Select start date..."
             showWeekNumbers 
             todayButton="Set Today"
-            dateFormat="MMMM d, yyyy"
-            isClearable={true} />
+            dateFormat="MMMM d, yyyy" />
         </div>
-        <div className={styles.flight_search_input_div}>
-          End Date:
+        <div className="d-flex flex-row justify-content-between align-items-between gap-2">
+          <h5>End Date</h5>
           <DatePicker
             selected={endDate}
-            onChange={(date) => setEndDate(date)}
+            onChange={(date) => handleUpdateEndDate(date)}
             selectsEnd
             startDate={startDate}
             endDate={endDate}
@@ -79,15 +73,14 @@ const FlightSearchInput = () => {
             placeholderText="Select end date..."
             showWeekNumbers 
             todayButton="Set Today"
-            dateFormat="MMMM d, yyyy"
-            isClearable={true} />      
+            dateFormat="MMMM d, yyyy" />      
         </div>      
-        <Link className='col-3 d-flex flex-row justify-content-start align-items-start' to={`/output`}>
-          <Button className='col-4 mt-4' variant="primary">
-            SEARCH
-          </Button>
-        </Link>
       </form>
+      <Link className='col-12 d-flex flex-row justify-content-center align-items-center' to={`/output`}>
+        <Button className='col-1' variant="primary">
+          SEARCH
+        </Button>
+      </Link>
     </div>
   );
 }

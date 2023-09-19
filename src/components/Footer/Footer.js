@@ -1,11 +1,16 @@
-import styles from './Footer.module.scss';
+import React from 'react';
+import { MDBFooter, MDBContainer } from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <nav className={styles.footer}>
-      <Link className={({ isActive }) => isActive ? styles.linkActive : undefined} to="https://github.com/PedroPLCode"><i className="fa fa-github"></i><i>pedro</i></Link>
-    </nav>
+    <MDBFooter className='bg-primary text-center text-white mt-3'>
+      <MDBContainer className='p-3'>
+        <Link to='https://github.com/PedroPLCode/' >
+          Pedro GitHub profile
+        </Link>
+      </MDBContainer>
+    </MDBFooter>
   );
 }
 
