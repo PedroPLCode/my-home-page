@@ -1,9 +1,11 @@
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 import { Routes, Route } from 'react-router-dom';
-import FlightSearchInput from './components/FlightSearchInput/FlightSearchInput';
-import FlightSearchOutput from './components/FlightSearchOutput/FlightSearchOutput';
+import MainPage from './components/MainPage/MainPage';
+import ContactPage from './components/ContactPage/ContactPage';
 import PageNotFound from './components/PageNotFound/PageNotFound';
+import AboutMePage from './components/AboutMePage/AboutMePage';
+import PortfolioPage from './components/PortfolioPage/PortfolioPage';
 import { Container } from 'react-bootstrap';
 
 const App = () => {
@@ -12,8 +14,10 @@ const App = () => {
       <NavBar />
       <Container>
       <Routes>
-          <Route path="/" element={<FlightSearchInput />} />
-          <Route path="/output" element={<FlightSearchOutput />} />
+          <Route path="/" element={<MainPage />} />
+          <Route path="/aboutme" element={<AboutMePage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/portfolio" element={<PortfolioPage />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Container>
