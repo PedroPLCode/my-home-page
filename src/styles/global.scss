@@ -7,11 +7,12 @@
 body {
   margin: 0;
   padding: 0;
-  background: $color-light;
   font-family: $font-text;
   font-size: ($base-size * 1.1);
   color: $color-text;
   letter-spacing: 0.5px;
+  background-image: url('../background.jpg');
+  background-size: cover;
 }
 
 :global(.container) {

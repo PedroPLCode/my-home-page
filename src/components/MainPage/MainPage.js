@@ -8,7 +8,7 @@ import { Button } from "react-bootstrap";
 const MainPage = () => {
 
   return (
-    <div className="d-flex flex-column justify-content-center align-items-center">
+    <div className="d-flex flex-column text-white justify-content-center align-items-center">
       <h3>Main Page Component</h3>
     </div>
   );

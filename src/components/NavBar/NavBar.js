@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <Navbar bg="primary" variant="dark" sticky="top" className="mb-3">
+    <Navbar bg="primary" variant="dark" sticky="top" className="mb-3 text-white opacity-75">
       <Container>
         <Navbar.Brand href="/">Piotr Gaszczyński</Navbar.Brand>
         <Nav className="justify-content-end">
