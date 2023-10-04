@@ -1,17 +1,16 @@
-import { Envelope, Telephone, Instagram, Linkedin, Github} from 'react-bootstrap-icons';
-
 const ContactPage = () => {
 
   return (
-    <div className="d-flex flex-column text-white justify-content-center align-items-center">
-      <h3>ContactPage component</h3>
-      <h5>You can contact me by email or whassap</h5>
+    <div className="full-height contact-page d-flex flex-column justify-content-center align-items-center">
+      <h5>&lt;contact me via email or whassap&gt;</h5>
+      <h5>&lt;contact&gt;</h5>
       <div className="d-flex flex-row justify-content-center align-items-center gap-2"> 
-        <a href='mailto:piotrek.gaszczynski@gmail.com'><Envelope color="royalblue" size={22} /> piotrek.gaszczynski@gmail.com</a>
+        <a href='mailto:piotrek.gaszczynski@gmail.com'>&lt;mailto=piotrek.gaszczynski@gmail.com&gt;</a>
       </div>
       <div className="d-flex flex-row justify-content-center align-items-end gap-2">
-        <a href='tel:48605208772'><Telephone color="royalblue" size={22} /> (+48)605208772</a>
+        <a href='tel:48605208772'>&lt;callto=(+48)605208772&gt;</a>
       </div>
+      <h5>&lt;/contact&gt;</h5>
     </div>
   );
 }

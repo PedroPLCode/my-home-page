@@ -4,21 +4,23 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <Navbar bg="primary" variant="dark" sticky="top" className="mb-3 text-white opacity-75">
-      <Container>
-        <Navbar.Brand href="/">Piotr Gaszczyński</Navbar.Brand>
+    <Navbar variant="dark" sticky="top" className="mb-3 text-black opacity-75">
+      <Container className='d-flex d-row justify-content-between align-items-start'>
+        <Navbar.Brand href="/">
+          <p>&lt;piotr.gaszczyński&gt;&lt;/frontend developer&gt; </p>
+        </Navbar.Brand>
         <Nav className="justify-content-end">
-          <Nav.Link as={NavLink} to="/">
-            Main Page
+          <Nav.Link as={NavLink} to="/" >
+            &lt;home&gt; 
           </Nav.Link>
-          <Nav.Link as={NavLink} to="/aboutme">
-            About Me
+          <Nav.Link as={NavLink} to="/about">
+            &lt;about&gt; 
           </Nav.Link>
           <Nav.Link as={NavLink} to="/portfolio">
-            My Portfolio
+            &lt;portfolio&gt; 
           </Nav.Link>
           <Nav.Link as={NavLink} to="/contact">
-            Contact me
+            &lt;contact&gt; 
           </Nav.Link>
         </Nav>
       </Container>

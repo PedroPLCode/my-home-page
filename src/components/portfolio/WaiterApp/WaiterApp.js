@@ -5,13 +5,13 @@ import { Button } from "react-bootstrap";
 // CSS Modules, react-datepicker-cssmodules.css
 // import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 
-const MainPage = () => {
+const WaiterApp = () => {
 
   return (
     <div className="full-height d-flex flex-column justify-content-center align-items-center">
-      <h3>Main Page Component</h3>
+      <h3>WaiterApp Portfolio</h3>
     </div>
   );
 }
 
-export default MainPage;
+export default WaiterApp;
