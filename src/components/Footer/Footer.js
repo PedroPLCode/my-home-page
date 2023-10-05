@@ -2,7 +2,7 @@ import React from 'react';
 import { MDBFooter, MDBContainer } from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom';
 import { Instagram, Linkedin, Github} from 'react-bootstrap-icons';
-import styles from './Footer.module.scss'; //???
+import styles from './Footer.module.scss';
 
 const Footer = () => {
   return (

@@ -1,5 +1,9 @@
 @import '../../styles/settings.scss';
 
+.portfolio_page {
+  height: 75vh;
+}
+
 .portfolio_link {
   color: $color-success;
   &:hover {

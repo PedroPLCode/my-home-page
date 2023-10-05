@@ -4,7 +4,7 @@ import styles from './ContactPage.module.scss';
 const ContactPage = () => {
 
   return (
-    <div className={clsx("full-height d-flex flex-column justify-content-center align-items-center", styles.contact_page)}>
+    <div className={clsx("d-flex flex-column justify-content-center align-items-center", styles.contact_page)}>
       <h5>&lt;contact me via email or whassap&gt;</h5>
       <h5>&lt;contact&gt;</h5>
       <div className="d-flex flex-row justify-content-center align-items-center gap-2"> 

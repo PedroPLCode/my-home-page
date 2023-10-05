@@ -6,11 +6,12 @@ import { Container } from 'react-bootstrap';
 import styles from './PortfolioPage.module.scss';
 import SinglePortfolioProjectOverview from '../SinglePortfolioProjectOverview/SinglePortfolioProjectOverview';
 import portfolioDetails from '../../portfolioDetails.js';
+import { clsx } from 'clsx';
 
 const PortfolioPage = () => {
 
     return (
-      <Container className="full-height d-flex flex-column justify-content-center align-items-center">
+      <Container className={clsx("d-flex flex-column justify-content-center align-items-center", styles.portfolio_page)}>
         <h3>PortfolioPage component</h3>
         <h5>My projects..</h5>
         <ul>
