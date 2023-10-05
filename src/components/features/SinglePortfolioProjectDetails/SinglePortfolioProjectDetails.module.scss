@@ -1,5 +1,12 @@
-@import '../../styles/settings.scss';
+@import '../../../styles/settings.scss';
 
 .project_details {
   height: 75vh;
+  a {
+    color: $color-success;
+    &:hover {
+      transform: scale(1.2);
+      color: $color-warning;
+    }
+  }
 }

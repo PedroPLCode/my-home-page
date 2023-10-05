@@ -1,17 +1,17 @@
-import NavBar from './components/NavBar/NavBar';
-import Footer from './components/Footer/Footer';
+import NavBar from './components/views/NavBar/NavBar';
+import Footer from './components/views/Footer/Footer';
 import { Routes, Route } from 'react-router-dom';
-import MainPage from './components/MainPage/MainPage';
-import ContactPage from './components/ContactPage/ContactPage';
-import PageNotFound from './components/PageNotFound/PageNotFound';
-import AboutMePage from './components/AboutMePage/AboutMePage';
-import PortfolioPage from './components/PortfolioPage/PortfolioPage';
+import MainPage from './components/pages/MainPage/MainPage';
+import ContactPage from './components/pages/ContactPage/ContactPage';
+import PageNotFound from './components/pages/PageNotFound/PageNotFound';
+import AboutMePage from './components/pages/AboutMePage/AboutMePage';
+import PortfolioPage from './components/pages/PortfolioPage/PortfolioPage';
 import { Container } from 'react-bootstrap';
 import React from 'react';
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
-import SinglePortfolioProjectDetails from './components/SinglePortfolioProjectDetails/SinglePortfolioProjectDetails';
+import SinglePortfolioProjectDetails from './components/features/SinglePortfolioProjectDetails/SinglePortfolioProjectDetails';
 
 const App = () => {
 

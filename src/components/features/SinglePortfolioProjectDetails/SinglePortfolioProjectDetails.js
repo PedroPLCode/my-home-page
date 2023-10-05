@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import portfolioDetails from '../../portfolioDetails.js';
+import portfolioDetails from '../../../portfolioDetails.js';
 import clsx from 'clsx';
 import styles from './SinglePortfolioProjectDetails.module.scss';
 
@@ -14,18 +14,18 @@ const SinglePortfolioProjectDetails = props => {
     if (SinglePortfolioProject.link === projectId) {
       projectFound = true;
       return (
-        <li className={clsx("d-flex flex-column justify-content-center align-items-center", styles.project_details)}>
+        <div className={clsx("d-flex flex-column justify-content-center align-items-center", styles.project_details)}>
                 <Link to='/portfolio' >back</Link>
           <h3>{SinglePortfolioProject.name}</h3>
           <h3>{SinglePortfolioProject.desc}</h3>
           <h3>{SinglePortfolioProject.techs}</h3>
-          <Link to={SinglePortfolioProject.gitHubLink}>
-            link to Git Hub
+          <Link to={SinglePortfolioProject.gitHubLink} target='_blank'>
+            link to Git Hub repo
           </Link>
-          <Link to={SinglePortfolioProject.liveLink}>
+          <Link to={SinglePortfolioProject.liveLink} target='_blank'>
             link to live project
           </Link>
-        </li>
+        </div>
       );
     }
   }

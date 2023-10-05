@@ -32,12 +32,12 @@ const portfolioDetails =  [
     liveLink: 'https://project-223733.kodilla.com/'
   },
     {
-    link: 'todolist',
+    link: 'todolist', //OK
     name: 'To do List App',
     techs: 'JavaScript React Redux HTML CSS',
     desc: 'Short description',
     gitHubLink: 'https://github.com/PedroPLCode/11.first-react-app.git',
-    liveLink: ''
+    liveLink: 'https://11first-react-app.pedroplcode.repl.co'
   },
     {
     link: 'creatively', //OK

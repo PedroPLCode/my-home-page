@@ -1,5 +1,19 @@
-@import '../../styles/settings.scss';
+@import '../../../styles/settings.scss';
 
 .project_overview {
   height: 75vh;
+  h5 {
+    font-size: 12px;
+  }
+  h6 {
+    font-size: 10px;
+  }
+  a {
+    color: $color-success;
+    transition: $transition;
+    &:hover {
+      transform: scale(1.2);
+      color: $color-warning;
+    }
+  }
 }
