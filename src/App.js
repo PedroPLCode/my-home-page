@@ -11,7 +11,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
-import WaiterApp from './components/portfolio/WaiterApp/WaiterApp';
+import SinglePortfolioProjectDetails from './components/SinglePortfolioProjectDetails/SinglePortfolioProjectDetails';
 
 const App = () => {
 
@@ -41,7 +41,7 @@ const App = () => {
               <Route path="/about" element={<AboutMePage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/portfolio" element={<PortfolioPage />} />
-              <Route path="/portfolio/waiterapp" element={<WaiterApp />} />
+              <Route path="/portfolio/:projectId" element={<SinglePortfolioProjectDetails />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
           </div>

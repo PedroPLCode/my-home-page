@@ -21,108 +21,11 @@ main {
   margin: 0 auto;
 }
 
-nav {
-  background-image: linear-gradient($color-success, $color-background);
-}
-
-footer {
-  background-image: linear-gradient($color-background, $color-success);
-}
-
-.footer-icon {
-  margin-left: ($base-size / 2);
-  font-size: ($base-size * 3);
-  color: $color-success;
-  transition: $transition;
-}
-
-.footer-icon:hover {
-  color: $color-warning;
-  transform: scale(1.2) rotate(360deg);
-}
-
-.portfolio-link {
-  color: $color-success;
-  &:hover {
-    color: $color-warning;
-  }
-}
-
-.navbar-brand {
-  font-weight: bold;
-}
-
-.nav-link {
-  color: $color-success;
-  font-size: ($base-size * 1.6);
-  transition: $transition;
-  &:hover {
-    color: $color-warning;
-    transform: scale(1.2);
-  }
-  &.active {
-    color: $color-warning;
-    font-weight: bold;
-  }
-}
-
 .full-height {
   height: 75vh;
-}
-
-.contact-page {
-  h5 {
-    width: 330px;
-    text-align: center;
-  }
-  h5:first-of-type {
-    border-top: 2px solid $color-success;
-  }
-  h5:last-of-type {
-    border-bottom: 2px solid $color-success;
-  }
-  a {
-    color: $color-success;
-    &:hover {
-      transform: scale(1.2);
-      color: $color-warning;
-    }
-  }
 }
 
 a:link {
   text-decoration: none;
   transition: $transition;
-}
-
-// Transition
-
-.fadeIn {
-  animation: 0.5s fadeIn forwards;
-}
-
-.fadeOut {
-  animation: 0.5s fadeOut forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.8) rotate(5deg);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-  }
-  to {
-    transform: scale(0.8) rotate(5deg);
-    opacity: 0;
-  }
 }

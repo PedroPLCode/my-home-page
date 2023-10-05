@@ -1,0 +1,16 @@
+@import '../../styles/settings.scss';
+
+footer {
+    background-image: linear-gradient($color-background, $color-success);
+  }
+  
+.footer_icon {
+  margin-left: ($base-size / 2);
+  font-size: ($base-size * 3);
+  color: $color-success;
+  transition: $transition;
+  &:hover {
+    color: $color-warning;
+    transform: scale(1.2) rotate(360deg);
+  }
+}

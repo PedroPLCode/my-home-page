@@ -1,0 +1,8 @@
+@import '../../styles/settings.scss';
+
+.portfolio_link {
+  color: $color-success;
+  &:hover {
+    color: $color-warning;
+  }
+}

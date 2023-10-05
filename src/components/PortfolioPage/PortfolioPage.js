@@ -3,6 +3,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
+import styles from './PortfolioPage.module.scss';
+import SinglePortfolioProjectOverview from '../SinglePortfolioProjectOverview/SinglePortfolioProjectOverview';
+import portfolioDetails from '../../portfolioDetails.js';
 
 const PortfolioPage = () => {
 
@@ -10,16 +13,19 @@ const PortfolioPage = () => {
       <Container className="full-height d-flex flex-column justify-content-center align-items-center">
         <h3>PortfolioPage component</h3>
         <h5>My projects..</h5>
-        <Row>
-            <Col>
-              Waiter App
-            </Col>
-          <Col>
-            <Link to='waiterapp' className='portfolio-link'>
-              see more
-            </Link>
-          </Col>       
-        </Row>
+        <ul>
+        {portfolioDetails.map(project => 
+          <SinglePortfolioProjectOverview 
+            key={project.name}
+            link={project.link}
+            name={project.name}
+            techs={project.techs}
+            desc={project.desc}
+            gitHubLink={project.gitHubLink}
+            liveLink={project.liveLink}
+            />
+        )}
+        </ul>
       </Container>
     );
   }
