@@ -5,13 +5,12 @@ import styles from './SinglePortfolioProjectOverview.module.scss';
 const SinglePortfolioProjectOverview = props => {
     
   return (
-    <li className="p-3">
-      <h5>{props.name}</h5>
+    <div className="p-3">
       <h6>{props.techs}</h6>
       <Link to={props.link}>
       see more
       </Link>
-    </li>
+    </div>
   );
 }
 

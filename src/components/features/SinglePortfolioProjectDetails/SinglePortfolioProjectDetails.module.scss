@@ -2,6 +2,7 @@
 
 .project_details {
   height: 75vh;
+  transform: rotateX(30deg);
   a {
     color: $color-success;
     &:hover {

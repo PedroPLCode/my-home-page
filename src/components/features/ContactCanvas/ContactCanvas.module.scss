@@ -1,0 +1,20 @@
+@import '../../../styles/settings.scss';
+
+.offcanvas {
+  background-color: $color-warning;
+  color: $color-success;
+}
+
+.nav_link {
+  color: $color-success;
+  font-size: ($base-size * 1.6);
+  transition: $transition;
+  &:hover {
+    color: $color-warning;
+    transform: scale(1.2);
+  }
+  &.active {
+    color: $color-warning;
+    font-weight: bold;
+  }
+}

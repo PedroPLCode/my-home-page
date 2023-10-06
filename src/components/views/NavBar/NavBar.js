@@ -2,6 +2,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { Nav, Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import styles from './NavBar.module.scss'; 
+import ContactCanvas from '../../features/ContactCanvas/ContactCanvas';
 
 const NavBar = () => {
   return (
@@ -20,9 +21,7 @@ const NavBar = () => {
           <Nav.Link as={NavLink} to="/portfolio" className={styles.nav_link} >
             &lt;portfolio&gt; 
           </Nav.Link>
-          <Nav.Link as={NavLink} to="/contact" className={styles.nav_link} >
-            &lt;contact&gt; 
-          </Nav.Link>
+          <ContactCanvas />
         </Nav>
       </Container>
     </Navbar>
