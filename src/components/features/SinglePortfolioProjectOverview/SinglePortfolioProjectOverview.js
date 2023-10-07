@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import clsx from 'clsx';
+//import clsx from 'clsx';
 import styles from './SinglePortfolioProjectOverview.module.scss';
 
 const SinglePortfolioProjectOverview = props => {

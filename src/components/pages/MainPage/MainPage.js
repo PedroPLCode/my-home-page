@@ -1,11 +1,8 @@
 import React from "react";
-import { Link } from 'react-router-dom';
-import { Button } from "react-bootstrap";
 import { clsx } from "clsx";
 import styles from './MainPage.module.scss';
-
-// CSS Modules, react-datepicker-cssmodules.css
-// import 'react-datepicker/dist/react-datepicker-cssmodules.css';
+//import { Link } from 'react-router-dom';
+//import { Button } from "react-bootstrap";
 
 const MainPage = () => {
 

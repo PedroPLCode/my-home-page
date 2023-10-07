@@ -1,16 +1,13 @@
+import { React, useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 import NavBar from './components/views/NavBar/NavBar';
 import Footer from './components/views/Footer/Footer';
-import { Routes, Route } from 'react-router-dom';
 import MainPage from './components/pages/MainPage/MainPage';
 import ContactPage from './components/pages/ContactPage/ContactPage';
 import PageNotFound from './components/pages/PageNotFound/PageNotFound';
 import AboutMePage from './components/pages/AboutMePage/AboutMePage';
 import PortfolioPage from './components/pages/PortfolioPage/PortfolioPage';
-import { Container } from 'react-bootstrap';
-import React from 'react';
-import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
 import SinglePortfolioProjectDetails from './components/features/SinglePortfolioProjectDetails/SinglePortfolioProjectDetails';
 
 const App = () => {

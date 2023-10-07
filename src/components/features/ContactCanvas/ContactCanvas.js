@@ -1,14 +1,13 @@
+//import Button from 'react-bootstrap/Button';
+//import Navbar from 'react-bootstrap/Navbar';
+//import { Nav, Container } from 'react-bootstrap';
+//import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import styles from './ContactCanvas.module.scss';
-import Navbar from 'react-bootstrap/Navbar';
-import { Nav, Container } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
 
 function ContactCanvas() {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 

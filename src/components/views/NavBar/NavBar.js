@@ -1,8 +1,8 @@
 import Navbar from 'react-bootstrap/Navbar';
 import { Nav, Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-import styles from './NavBar.module.scss'; 
 import ContactCanvas from '../../features/ContactCanvas/ContactCanvas';
+import styles from './NavBar.module.scss'; 
 
 const NavBar = () => {
   return (
