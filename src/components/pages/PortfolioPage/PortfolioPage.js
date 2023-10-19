@@ -8,6 +8,7 @@ import { clsx } from 'clsx';
 import { Container } from 'react-bootstrap';
 import PortfolioCarousel from '../../features/PortfolioCarousel/PortfolioCarousel';
 import styles from './PortfolioPage.module.scss';
+import PortfolioList from '../../features/PortfolioList/PortfolioList';
 
 const PortfolioPage = () => {
 
@@ -15,7 +16,7 @@ const PortfolioPage = () => {
       <Container className={clsx("d-flex flex-column justify-content-center align-items-center", styles.portfolio_page)}>
         <h3>PortfolioPage component</h3>
         <h5>My projects..</h5>
-        <PortfolioCarousel />
+        <PortfolioList />
       </Container>
     );
   }

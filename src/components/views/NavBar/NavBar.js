@@ -11,7 +11,7 @@ const NavBar = () => {
         <Navbar.Brand href="/" className={styles.navbar_brand}>
           <p>&lt;piotr.gaszczyński&gt;&lt;/frontend developer&gt; </p>
         </Navbar.Brand>
-        <Nav className="justify-content-end">
+        <Nav className="d-flex d-row justify-content-between align-items-center">
           <Nav.Link as={NavLink} to="/" className={styles.nav_link} >
             &lt;home&gt; 
           </Nav.Link>

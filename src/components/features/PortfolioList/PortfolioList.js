@@ -6,25 +6,15 @@
 //import { clsx } from 'clsx';
 import SinglePortfolioProjectOverview from '../../features/SinglePortfolioProjectOverview/SinglePortfolioProjectOverview';
 import portfolioDetails from '../../../portfolioDetails.js';
-import Carousel from 'react-bootstrap/Carousel';
-import CarouselImage from '../CarouselImage/CarouselImage';
-import styles from './PortfolioCarousel.module.scss';
+import styles from './PortfolioList.module.scss';
 
-const PortfolioCarousel = () => {
+const PortfolioList = () => {
 
   return (      
-    <Carousel className={styles.carousel}>
+    <ul>
       {portfolioDetails.map(project => 
-        <Carousel.Item interval={5000}>
-          <CarouselImage key={project.name}
-                         link={project.link}
-                         name={project.name}
-                         techs={project.techs}
-                         desc={project.desc}
-                         gitHubLink={project.githublink}
-                         liveLink={project.livelink}
-                          text="First slide" />
-          <Carousel.Caption>
+        <li>
+
             <SinglePortfolioProjectOverview key={project.name}
                                             link={project.link}
                                             name={project.name}
@@ -32,11 +22,11 @@ const PortfolioCarousel = () => {
                                             desc={project.desc}
                                             gitHubLink={project.githublink}
                                             liveLink={project.livelink} />
-          </Carousel.Caption>
-        </Carousel.Item>
+
+          </li>
       )}
-    </Carousel>
+    </ul>
   );
 }
     
-export default PortfolioCarousel;
+export default PortfolioList;

@@ -7,6 +7,7 @@ import './styles/global.scss';
 import './styles/animatedTransition.scss';
 import 'font-awesome/css/font-awesome.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+//import './js/hamburger.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
