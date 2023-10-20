@@ -3,11 +3,13 @@ import { Nav, Container } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import ContactCanvas from '../../features/ContactCanvas/ContactCanvas';
 import styles from './NavBar.module.scss'; 
+import HamburgerMenu from '../../features/HamburgerMenu/HamburgerMenu';
 
 const NavBar = () => {
   return (
     <Navbar variant="dark" sticky="top" className="mb-3 text-black opacity-75">
       <Container className='d-flex d-row justify-content-between align-items-start'>
+        <HamburgerMenu />
         <Navbar.Brand href="/" className={styles.navbar_brand}>
           <p>&lt;piotr.gaszczyński&gt;&lt;/frontend developer&gt; </p>
         </Navbar.Brand>
