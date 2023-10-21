@@ -1,0 +1,29 @@
+@import '../../../styles/settings.scss';
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $base-size;
+    li {
+        width: 32%;
+        border: 1px solid $color-success;
+        border-radius: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: .5s all;
+        h5 {
+            height: auto;
+            width: auto;
+        }
+        &:hover {
+            border-color: $color-warning;
+            border-radius: 50px;
+
+        }
+    }
+}

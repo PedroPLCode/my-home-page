@@ -6,6 +6,18 @@ nav {
 
 .navbar_brand {
   font-weight: bold;
+  margin: auto 0;
+  p {
+    color: $color-success;
+    transition: .5s all;
+    &:hover {
+      color: $color-warning;
+    }
+  }
+/*  &.hamburger_opened {
+    padding-left: $base-size * 6;
+    transform: scale(0.8);
+  } */
 }
   
 .nav_link {
@@ -20,4 +32,8 @@ nav {
     color: $color-warning;
     font-weight: bold;
   }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: $color-success;
 }

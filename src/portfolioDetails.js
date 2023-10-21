@@ -1,6 +1,6 @@
 const portfolioDetails =  [
   {
-    link: 'waiter', //OK
+    link: 'waiter', // REPLIT FAILED
     name: 'Waiter App',
     techs: 'JavaScript React Redux HTML CSS',
     desc: 'Small App for table managment in restaurant, updating tables status.',
@@ -8,7 +8,7 @@ const portfolioDetails =  [
     liveLink: 'https://16waiter-app.pedroplcode.repl.co'
   },
     {
-    link: 'pizzeria', //OK
+    link: 'pizzeria', // UPDATE REPLIT
     name: 'Pizzeria App',
     techs: 'JavaScript HTML CSS',
     desc: 'App for pizzeria menagenent - online booking a tables and making orders',
@@ -32,7 +32,7 @@ const portfolioDetails =  [
     liveLink: 'https://project-223733.kodilla.com/'
   },
     {
-    link: 'todolist', //OK
+    link: 'todolist', // REPLIT FAILED
     name: 'To do List App',
     techs: 'JavaScript React Redux HTML CSS',
     desc: 'Short description',

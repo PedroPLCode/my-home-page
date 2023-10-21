@@ -1,4 +1,4 @@
-
+@import '../../../styles/settings.scss';
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -6,7 +6,7 @@ body {
   }
   
   .menu {
-    z-index: 2;
+    z-index: 2000;
   }
   
   .menuBar {
@@ -14,12 +14,16 @@ body {
     height: 40px;
     margin: 30px 0 20px 20px;
     cursor: pointer;
+    transition: 0.5s all;
+    &:hover .bar {
+      background-color: $color-warning;
+    }
   }
   
   .bar {
     height: 5px;
     width: 100%;
-    background-color: #DC052D;
+    background-color: $color-success;
     display: block;
     border-radius: 5px;
     transition: 0.3s ease;
@@ -27,39 +31,36 @@ body {
   
   .bar1 {
     transform: translateY(-4px);
+    &.change {
+      transform: translateY(4px) rotateZ(-405deg);
+    }
   }
 
   .bar2 {
-
+    &.change {
+      opacity: 0;
+    }
   }
   
   .bar3 {
     transform: translateY(4px);
+    &.change {
+      transform: translateY(-6px) rotateZ(45deg);    }
   }
   
   .nav {
     transition: 0.3s ease;
-    display: none;
+    transform: rotate(45deg) scale(0);
     background: none;
-  }
-  
-  .nav ul {
-    padding: 0 22px;
-  }
-  
-  .nav li {
-    list-style: none;
-    padding: 12px 0;
-  }
-  
-  .nav li a {
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-  }
-  
-  .nav li a:hover {
-    font-weight: bold;
+    &.change {
+      transform: rotate(0deg) scale(1);
+      div {
+        a {
+          color: red;
+          border: 2px solid red;
+        }
+      }
+    }
   }
   
   .menuBg, .menu {
@@ -69,39 +70,34 @@ body {
   }
   
   .menuBg {
-    z-index: 1;
+    z-index: 1000;
     width: 0;
     height: 0;
     margin: 30px 0 20px 20px;
-    background: radial-gradient(circle, #000000, #00ff22);
+    backdrop-filter: brightness(45%);
     border-radius: 50%;
     transition: 0.3s ease;
   }
   
-  .change {
-    display: block;
-  }
-  
   .change .bar {
-    background-color: white;
-  }
-  
-  .change #bar1 {
-    transform: translateY(4px) rotateZ(-45deg);
-  }
-  
-  .change #bar2 {
-    opacity: 0;
-  }
-  
-  .change #bar3 {
-    transform: translateY(-6px) rotateZ(45deg);
+    background-color: $color-success;
   }
   
   .changeBg {
     width: 520px;
     height: 460px;
+    background-color: black;
     transform: translate(-60%,-30%);
   }
   
-  
+  .nav_link {
+    color: $color-success;
+    font-size: ($base-size * 1.6);
+    transition: $transition;
+    &:hover {
+      transform: scale(1.2);
+    }
+    &.active {
+      font-weight: bold;
+    }
+  }

@@ -3,11 +3,29 @@
 .project_details {
   height: 75vh;
   transform: rotateX(30deg);
+  border: 1px solid $color-success;
+  border-radius: $radius-base;
   a {
     color: $color-success;
+    margin: $base-size;
+    height: $base-size * 4;
+    width: $base-size * 12;
+    padding: $base-size;
+    text-align: center;
+    border: 1px solid $color-success;
+    border-radius: $radius-base;
+    transition: $transition;
+    &:first-of-type {
+      top: 0;
+      right: 0;
+    }
     &:hover {
-      transform: scale(1.2);
       color: $color-warning;
+      border-color: $color-warning;
+      border-radius: $radius-round;
+      .project_details {
+        border-color: $color-warning;
+      }
     }
   }
 }

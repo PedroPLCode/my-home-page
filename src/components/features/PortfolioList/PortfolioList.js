@@ -14,17 +14,18 @@ const PortfolioList = () => {
     <ul>
       {portfolioDetails.map(project => 
         <li>
-
-            <SinglePortfolioProjectOverview key={project.name}
-                                            link={project.link}
-                                            name={project.name}
-                                            techs={project.techs}
-                                            desc={project.desc}
-                                            gitHubLink={project.githublink}
-                                            liveLink={project.livelink} />
-
-          </li>
+          <SinglePortfolioProjectOverview key={project.name}
+                                          link={project.link}
+                                          name={project.name}
+                                          techs={project.techs}
+                                          desc={project.desc}
+                                          gitHubLink={project.githublink}
+                                          liveLink={project.livelink} />
+        </li>
       )}
+        <li>
+          <h5>Ask me for more</h5>
+        </li>
     </ul>
   );
 }

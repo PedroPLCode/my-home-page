@@ -15,15 +15,15 @@ const SinglePortfolioProjectDetails = props => {
       return (
         <div className='wrapper'>
           <div className={clsx("d-flex flex-column justify-content-center align-items-center", styles.project_details)}>
-            <Link to='/portfolio' >back</Link>
+            <Link to='/portfolio' >back to all</Link>
             <h3>{SinglePortfolioProject.name}</h3>
             <h3>{SinglePortfolioProject.desc}</h3>
             <h3>{SinglePortfolioProject.techs}</h3>
             <Link to={SinglePortfolioProject.gitHubLink} target='_blank'>
-              link to Git Hub repo
+              Git Hub repo
             </Link>
             <Link to={SinglePortfolioProject.liveLink} target='_blank'>
-              link to live project
+              live project
             </Link>
           </div>
         </div>

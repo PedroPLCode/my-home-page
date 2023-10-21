@@ -1,18 +1,40 @@
 @import '../../../styles/settings.scss';
 
 .offcanvas {
-  background-color: $color-warning;
+  background: none;
+  backdrop-filter: brightness(25%);
   color: $color-success;
+  border: 1px solid $color-success;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center ;
 }
 
 .nav_link {
   color: $color-success;
+  margin: auto 0;
   font-size: ($base-size * 1.6);
-  transform: rotate(10deg);
   transition: $transition;
+  .before {
+    display: block;
+  }
+  .after {
+    display: none;
+  }
   &:hover {
     color: $color-warning;
-    transform: scale(1.2) rotate(-15deg);
+    transform: scale(1.2) rotate(360deg);
     cursor: pointer;
+    .after {
+      display: block;
+      font-weight: bolder;
+      }
+    .before {
+      display: none;
+    }
   }
-}
+}  
+
+
