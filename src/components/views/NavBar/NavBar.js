@@ -7,7 +7,7 @@ import styles from './NavBar.module.scss';
 import HamburgerMenu from '../../features/HamburgerMenu/HamburgerMenu';
 import clsx from 'clsx';
 
-const NavBar = () => {
+const NavBar = props => {
 
   const [showNavMenu, setShowNavMenu] = useState(false);
 
@@ -38,7 +38,7 @@ const NavBar = () => {
           <ContactCanvas />
         </Nav>
         */}
-        <ContactCanvas closeHamburger={closeHamburger} />
+        <ContactCanvas closeHamburger={closeHamburger} changeBackgroundTextOn={props.changeBackgroundTextOn} changeBackgroundTextOff={props.changeBackgroundTextOff}/>
       </Container>
     </Navbar>
   );

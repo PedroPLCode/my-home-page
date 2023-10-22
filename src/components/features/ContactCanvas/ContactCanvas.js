@@ -16,7 +16,7 @@ const ContactCanvas = props => {
 
   return (
     <>      
-      <h3 onClick={handleShow} className={styles.nav_link} >
+      <h3 onClick={handleShow} className={styles.nav_link} onMouseEnter={props.changeBackgroundTextOn} onMouseLeave={props.changeBackgroundTextOff} >
         <span className={styles.before}>&lt;contact&gt;</span><span className={styles.after}>&lt;click&gt;</span> 
       </h3>
 

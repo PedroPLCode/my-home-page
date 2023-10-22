@@ -2,9 +2,14 @@
 
 .project_details {
   height: 75vh;
+  transition: $transition;
+  background: none;
+  backdrop-filter: brightness(50%);
   transform: rotateX(30deg);
   border: 1px solid $color-success;
   border-radius: $radius-base;
+  background-color: black;
+  filter: opacity(0.5);
   a {
     color: $color-success;
     margin: $base-size;
@@ -23,9 +28,11 @@
       color: $color-warning;
       border-color: $color-warning;
       border-radius: $radius-round;
-      .project_details {
-        border-color: $color-warning;
       }
     }
+    &.border_active {
+      border-color: $color-warning;
+      box-shadow: $base-size $base-size ($base-size / 2) $color-light;
+    }
   }
-}
+  

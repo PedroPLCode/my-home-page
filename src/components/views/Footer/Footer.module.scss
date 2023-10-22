@@ -1,7 +1,8 @@
 @import '../../../styles/settings.scss';
 
 footer {
-    background-image: linear-gradient($color-background, $color-success);
+  background: none;
+  backdrop-filter: brightness(50%);
   }
   
 .footer_icon {

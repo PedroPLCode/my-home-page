@@ -9,8 +9,11 @@ import PageNotFound from './components/pages/PageNotFound/PageNotFound';
 import AboutMePage from './components/pages/AboutMePage/AboutMePage';
 import PortfolioPage from './components/pages/PortfolioPage/PortfolioPage';
 import SinglePortfolioProjectDetails from './components/features/SinglePortfolioProjectDetails/SinglePortfolioProjectDetails';
+import clsx from 'clsx';
 
 const App = () => {
+
+  const [footerIconHover, setFooterIconHover] = useState(false);
 
   const location = useLocation();
   const [displayLocation, setDisplayLocation] = useState(location);
@@ -20,19 +23,31 @@ const App = () => {
     if (location !== displayLocation) setTransistionStage("fadeOut");
   }, [location, displayLocation]);
   
+  const changeBackgroundTextOn = () => {
+    setFooterIconHover(true);
+  }
+
+  const changeBackgroundTextOff = () => {
+    setFooterIconHover(false);
+  }
+
   return (
     <main>
-      <NavBar />
-        <Container>
+      <NavBar changeBackgroundTextOn={changeBackgroundTextOn} changeBackgroundTextOff={changeBackgroundTextOff} />
+        <Container className='containter_background'>
+          <div className={clsx('main_background', footerIconHover ? 'background_text_active' : '')}>
+            <h2>&lt;piotr.gaszczyński&gt;</h2>
+            <h2>&lt;/frontend developer&gt; </h2>
+          </div>
           <div
-            className={`${transitionStage}`}
+            className={clsx(`${transitionStage}`, 'main_content')}
             onAnimationEnd={() => {
               if (transitionStage === "fadeOut") {
                 setTransistionStage("fadeIn");
                 setDisplayLocation(location);
               }
             }}
-          >
+          > 
             <Routes location={displayLocation}>
               <Route path="/" element={<MainPage />} />
               <Route path="/about" element={<AboutMePage />} />
@@ -43,7 +58,7 @@ const App = () => {
             </Routes>
           </div>
         </Container>
-      <Footer />
+      <Footer changeBackgroundTextOn={changeBackgroundTextOn} changeBackgroundTextOff={changeBackgroundTextOff} />
     </main>
   );
 }

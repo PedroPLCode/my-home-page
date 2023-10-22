@@ -1,11 +1,12 @@
 @import '../../../styles/settings.scss';
 
 nav {
-  background-image: linear-gradient($color-success, $color-background);
+  background: none;
+  backdrop-filter: brightness(50%);
 }
 
 .navbar_brand {
-  font-weight: bold;
+  font-weight: lighter;
   margin: auto 0;
   p {
     color: $color-success;
@@ -14,10 +15,10 @@ nav {
       color: $color-warning;
     }
   }
-/*  &.hamburger_opened {
+  &.hamburger_opened {
     padding-left: $base-size * 6;
     transform: scale(0.8);
-  } */
+  }
 }
   
 .nav_link {
