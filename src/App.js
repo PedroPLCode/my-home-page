@@ -14,6 +14,7 @@ import clsx from 'clsx';
 const App = () => {
 
   const [footerIconHover, setFooterIconHover] = useState(false);
+  const [hamburgerHover, setHamburgerHover] = useState(false);
 
   const location = useLocation();
   const [displayLocation, setDisplayLocation] = useState(location);
@@ -31,9 +32,17 @@ const App = () => {
     setFooterIconHover(false);
   }
 
+  const changeBackgroundGradientOn = () => {
+    setHamburgerHover(true);
+  }
+
+  const changeBackgroundGradientOff = () => {
+    setHamburgerHover(false);
+  }
+
   return (
-    <main>
-      <NavBar changeBackgroundTextOn={changeBackgroundTextOn} changeBackgroundTextOff={changeBackgroundTextOff} />
+    <main className={clsx(hamburgerHover ? 'hamburger_hover' : 'hamburger_NOThover')}>
+      <NavBar changeBackgroundTextOn={changeBackgroundTextOn} changeBackgroundTextOff={changeBackgroundTextOff} changeBackgroundGradientOn={changeBackgroundGradientOn} changeBackgroundGradientOff={changeBackgroundGradientOff} />
         <Container className='containter_background'>
           <div className={clsx('main_background', footerIconHover ? 'background_text_active' : '')}>
             <h2>&lt;piotr.gaszczyński&gt;</h2>

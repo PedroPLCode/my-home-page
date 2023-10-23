@@ -17,8 +17,8 @@ const HamburgerMenu = props => {
       
   return (
     <>
-      <div className={styles.menu} id="menu">
-        <div className={clsx(styles.menuBar, props.showNavMenu ? styles.change : '')} id="menuBar" onClick={menuOnClick}>
+      <div className={styles.menu} id="menu" >
+        <div className={clsx(styles.menuBar, props.showNavMenu ? styles.change : '')} id="menuBar" onClick={menuOnClick} onMouseEnter={props.changeBackgroundGradientOn} onMouseLeave={props.changeBackgroundGradientOff} >
           <div id="bar1" className={clsx(styles.bar, styles.bar1, props.showNavMenu ? styles.change : '')}></div>
           <div id="bar3" className={clsx(styles.bar, styles.bar2, props.showNavMenu ? styles.change : '')}></div>
           <div id="bar3" className={clsx(styles.bar, styles.bar3, props.showNavMenu ? styles.change : '')}></div>
@@ -37,7 +37,7 @@ const HamburgerMenu = props => {
           </Nav>
         </nav> 
       </div>
-      <div className={clsx(styles.menuBg, props.showNavMenu ? styles.changeBg : '')} id="menuBg"></div>
+      <div className={clsx(styles.menuBg, props.showNavMenu ? styles.changeBg : '')} id="menuBg" onMouseEnter={props.changeBackgroundGradientOn} onMouseLeave={props.changeBackgroundGradientOff}></div>
     </>
   )
 }

@@ -20,7 +20,7 @@ const NavBar = props => {
   return (
     <Navbar variant="dark" sticky="top" className="mb-3 text-black opacity-75">
       <Container className='d-flex d-row justify-content-between align-items-center'>
-        <HamburgerMenu showNavMenu={showNavMenu} setShowNavMenu={setShowNavMenu} closeHamburger={closeHamburger} />
+        <HamburgerMenu showNavMenu={showNavMenu} setShowNavMenu={setShowNavMenu} closeHamburger={closeHamburger} changeBackgroundGradientOn={props.changeBackgroundGradientOn} changeBackgroundGradientOff={props.changeBackgroundGradientOff} />
         <Navbar.Brand href="/" className={clsx(styles.navbar_brand, showNavMenu ? styles.hamburger_opened : '' )}>
           <p>&lt;piotr.gaszczyński&gt;&lt;/frontend developer&gt; </p>
         </Navbar.Brand>
