@@ -6,22 +6,82 @@ ul {
     flex-wrap: wrap;
     justify-content: center;
     gap: $base-size;
+
     li {
+        border: 3px solid $color-success;
+        border-radius: 10px;
         width: 32%;
-        border: 1px solid $color-success;
-        border-radius: 5px;
+        height: 100px;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transition: .5s all;
-        h5 {
-            height: auto;
-            width: auto;
+        transition: $transition;
+        h5, h6 {
+          height: auto;
+          width: auto;
+          font-size: 12px;
+          font-weight: bold;
+          color: ($color-success);
+          transition: $transition;
+        }
+        h6 {
+          font-size: 16px;
         }
         &:hover {
-            border-color: $color-warning;
-        }
+      }
+
+          div {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.5);
+            transition: $transition;
+            &:hover {
+              cursor: pointer;
+              filter: opacity(1);
+              background: url('../../../bbb.png');
+            }
+            &:hover h5 {
+              opacity: 0;
+            }
+            &:hover h6 {
+              opacity: 0;
+            }
+          }
+
+
+    }
+    .last {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: linear-gradient(90deg, $color-success 50% , rgba(0, 0, 0, 0.5) 50%);
+      background-position: 100% 0;
+      background-size: 300% 300%;
+      transition: $transition;
+      h5, h6 {
+        height: auto;
+        width: auto;
+        font-size: 12px;
+        font-weight: bold;
+        color: ($color-success);
+        transition: $transition;
+      }
+      h6 {
+        font-size: 16px;
+      }
+      &:hover {
+        cursor: pointer;
+        background-position: 0 100%;
+      }
+      &:hover h5 {
+        color: rgba(0, 0, 0, 0.5);
+      }
+      &:hover h6 {
+        color: rgba(0, 0, 0, 0.5);
+      }
     }
 }

@@ -14,6 +14,7 @@ const PortfolioList = () => {
     <ul>
       {portfolioDetails.map(project => 
         <li>
+          <div>
           <SinglePortfolioProjectOverview key={project.name}
                                           link={project.link}
                                           name={project.name}
@@ -21,10 +22,12 @@ const PortfolioList = () => {
                                           desc={project.desc}
                                           gitHubLink={project.githublink}
                                           liveLink={project.livelink} />
+                                          </div>
         </li>
       )}
-        <li>
-          <h5>Ask me for more</h5>
+        <li className={styles.last}>
+          <h5>And more</h5>
+          <h6>Ask me for more</h6>
         </li>
     </ul>
   );

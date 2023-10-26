@@ -13,6 +13,10 @@ import clsx from 'clsx';
 
 const App = () => {
 
+  const [linkedInIconHover, setLinkedInIconHover] = useState(false);
+  const [instagramIconHover, setInstagramIconHover] = useState(false);
+  const [githubIconHover, setGithubIconHover] = useState(false);
+
   const [footerIconHover, setFooterIconHover] = useState(false);
   const [hamburgerHover, setHamburgerHover] = useState(false);
 
@@ -23,6 +27,27 @@ const App = () => {
   useEffect(() => {
     if (location !== displayLocation) setTransistionStage("fadeOut");
   }, [location, displayLocation]);
+
+  const changeLinkedInTextOn = () => {
+    setLinkedInIconHover(true);
+  }
+  const changeLinkedInTextOff = () => {
+    setLinkedInIconHover(false);
+  }
+  const changeInstagramTextOn = () => {
+    setInstagramIconHover(true);
+  }
+  const changeInstagramTextOff = () => {
+    setInstagramIconHover(false);
+  }
+  const changeGithubTextOn = () => {
+    setGithubIconHover(true);
+  }
+  const changeGithubTextOff = () => {
+    setGithubIconHover(false);
+  }
+
+
   
   const changeBackgroundTextOn = () => {
     setFooterIconHover(true);
@@ -67,7 +92,19 @@ const App = () => {
             </Routes>
           </div>
         </Container>
-      <Footer changeBackgroundTextOn={changeBackgroundTextOn} changeBackgroundTextOff={changeBackgroundTextOff} />
+      <Footer changeLinkedInTextOn={changeLinkedInTextOn}
+              changeLinkedInTextOff={changeLinkedInTextOff}
+              linkedInIconHover={linkedInIconHover}
+
+              changeInstagramTextOn={changeInstagramTextOn}
+              changeInstagramTextOff={changeInstagramTextOff}
+              instagramIconHover={instagramIconHover}
+
+              changeGithubTextOn={changeGithubTextOn}
+              changeGithubTextOff={changeGithubTextOff}
+              githubIconHover={githubIconHover}
+              
+ />
     </main>
   );
 }

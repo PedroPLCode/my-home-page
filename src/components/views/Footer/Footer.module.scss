@@ -1,17 +1,39 @@
 @import '../../../styles/settings.scss';
 
-footer {
+.footer {
+  width: 100%;
+  height: $base-size * 6;
+  position: fixed;
+  left: 0;
+  bottom: 0;
   background: none;
   backdrop-filter: brightness(50%);
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: $base-size;
   }
-  
-.footer_icon {
-  margin-left: ($base-size / 2);
-  font-size: ($base-size * 3);
-  color: $color-success;
-  transition: $transition;
-  &:hover {
-    color: $color-warning;
-    transform: scale(1.2) rotate(360deg);
+  &__icon {
+    font-size: ($base-size * 3);
+    color: $color-success;
+    transition: $transition;
+    &:hover {
+      color: $color-warning;
+      transform: scale(1.2) rotate(360deg);
+    }
+  }
+  &__text {
+    position: absolute;
+    opacity: 0;
+    transform: scale(0.8) translateX(-400px);
+    transition: $transition;
+    &__active {
+      opacity: 1;
+      transform: scale(1) translateX(-160px) translateY(3px);
+    }
   }
 }
+  

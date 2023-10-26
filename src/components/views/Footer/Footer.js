@@ -3,20 +3,33 @@ import { MDBFooter, MDBContainer } from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom';
 import { Instagram, Linkedin, Github} from 'react-bootstrap-icons';
 import styles from './Footer.module.scss';
+import clsx from 'clsx';
 
 const Footer = props => {
 
   return (
-    <MDBFooter className='mt-3 fixed-bottom opacity-75'>
-      <MDBContainer className='p-3 d-flex flex-row justify-content-end align-items-center gap-3'>
-        <Link to='https://github.com/PedroPLCode/' target="_blank" onMouseEnter={props.changeBackgroundTextOn} onMouseLeave={props.changeBackgroundTextOff}>
-          <Linkedin className={styles.footer_icon}/> 
+    <MDBFooter className={styles.footer}>
+      <MDBContainer className={styles.footer__container}>
+        <h4 className={clsx(styles.footer__text, props.linkedInIconHover ? styles.footer__text__active : '')}>see.myProfile(LinkedIn);</h4>
+        <h4 className={clsx(styles.footer__text, props.githubIconHover ? styles.footer__text__active : '')}>See my GitHub profile</h4>
+        <h4 className={clsx(styles.footer__text, props.instagramIconHover ? styles.footer__text__active : '')}>See my Instagram profile</h4>
+        <Link to='https://github.com/PedroPLCode/' 
+              target="_blank" 
+              onMouseEnter={props.changeLinkedInTextOn} 
+              onMouseLeave={props.changeLinkedInTextOff}>
+          <Linkedin className={styles.footer__icon}/> 
         </Link>
-        <Link to='https://github.com/PedroPLCode/' target="_blank" onMouseEnter={props.changeBackgroundTextOn} onMouseLeave={props.changeBackgroundTextOff} >
-          <Github  className={styles.footer_icon}/> 
+        <Link to='https://github.com/PedroPLCode/' 
+              target="_blank" 
+              onMouseEnter={props.changeGithubTextOn} 
+              onMouseLeave={props.changeGithubTextOff} >
+          <Github  className={styles.footer__icon}/> 
         </Link>
-        <Link to='https://github.com/PedroPLCode/' target="_blank" onMouseEnter={props.changeBackgroundTextOn} onMouseLeave={props.changeBackgroundTextOff} >
-          <Instagram className={styles.footer_icon}/> 
+        <Link to='https://github.com/PedroPLCode/' 
+              target="_blank" 
+              onMouseEnter={props.changeInstagramTextOn} 
+              onMouseLeave={props.changeInstagramTextOff} >
+          <Instagram className={styles.footer__icon}/> 
         </Link>
       </MDBContainer>
     </MDBFooter>

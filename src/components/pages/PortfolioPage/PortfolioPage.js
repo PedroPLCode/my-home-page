@@ -13,9 +13,7 @@ import PortfolioList from '../../features/PortfolioList/PortfolioList';
 const PortfolioPage = () => {
 
     return (
-      <Container className={clsx("d-flex flex-column justify-content-center align-items-center", styles.portfolio_page)}>
-        <h3>PortfolioPage component</h3>
-        <h5>My projects..</h5>
+      <Container className={clsx(styles.portfolio_page)}>
         <PortfolioList />
       </Container>
     );
