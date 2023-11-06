@@ -65,9 +65,20 @@ const App = () => {
     setHamburgerHover(false);
   }
 
+
+
+  const [showNavMenu, setShowNavMenu] = useState(false);
+
+  const closeHamburger = () => {
+    if (showNavMenu) {
+      setShowNavMenu(!showNavMenu);
+    }
+  }
+
+
   return (
     <main className={clsx(hamburgerHover ? 'hamburger_hover' : 'hamburger_NOThover')}>
-      <NavBar changeBackgroundTextOn={changeBackgroundTextOn} changeBackgroundTextOff={changeBackgroundTextOff} changeBackgroundGradientOn={changeBackgroundGradientOn} changeBackgroundGradientOff={changeBackgroundGradientOff} />
+      <NavBar setShowNavMenu={setShowNavMenu} closeHamburger={closeHamburger} showNavMenu={showNavMenu} changeBackgroundTextOn={changeBackgroundTextOn} changeBackgroundTextOff={changeBackgroundTextOff} changeBackgroundGradientOn={changeBackgroundGradientOn} changeBackgroundGradientOff={changeBackgroundGradientOff} />
         <Container className='containter_background'>
           <div className={clsx('main_background', footerIconHover ? 'background_text_active' : '')}>
             <h2>&lt;piotr.gaszczyński&gt;</h2>
@@ -86,8 +97,8 @@ const App = () => {
               <Route path="/" element={<MainPage />} />
               <Route path="/about" element={<AboutMePage />} />
               <Route path="/contact" element={<ContactPage />} />
-              <Route path="/portfolio" element={<PortfolioPage />} />
-              <Route path="/portfolio/:projectId" element={<SinglePortfolioProjectDetails />} />
+              <Route path="/portfolio" element={<PortfolioPage setShowNavMenu={setShowNavMenu} closeHamburger={closeHamburger} showNavMenu={showNavMenu} />} />
+              <Route path="/portfolio/:projectId" element={<SinglePortfolioProjectDetails setShowNavMenu={setShowNavMenu} closeHamburger={closeHamburger} showNavMenu={showNavMenu} />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
           </div>

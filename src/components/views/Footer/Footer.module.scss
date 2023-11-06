@@ -23,6 +23,7 @@
     &:hover {
       color: $color-warning;
       transform: scale(1.2) rotate(360deg);
+      animation: color_change .5s .5s infinite alternate both;
     }
   }
   &__text {
@@ -37,3 +38,8 @@
   }
 }
   
+@keyframes color_change {
+  100% {
+    color: $color-success;
+  }
+}

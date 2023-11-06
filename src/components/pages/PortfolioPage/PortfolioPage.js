@@ -10,11 +10,11 @@ import PortfolioCarousel from '../../features/PortfolioCarousel/PortfolioCarouse
 import styles from './PortfolioPage.module.scss';
 import PortfolioList from '../../features/PortfolioList/PortfolioList';
 
-const PortfolioPage = () => {
+const PortfolioPage = props => {
 
     return (
       <Container className={clsx(styles.portfolio_page)}>
-        <PortfolioList />
+        <PortfolioList setShowNavMenu={props.setShowNavMenu} closeHamburger={props.closeHamburger} showNavMenu={props.showNavMenu} />
       </Container>
     );
   }

@@ -23,7 +23,7 @@ const SinglePortfolioProjectDetails = props => {
         <div className={clsx(styles.wrapper, borderActive ? styles.border_active : '')}>
           <div className={clsx(styles.project_details, borderActive ? styles.border_active : '')}>
             <div className={styles.buttons}>
-              <Link to='/portfolio' onMouseEnter={changeBorderColor} onMouseLeave={changeBorderColor} >back to all</Link>
+              <Link to='/portfolio' onClick={props.closeHamburger} >back to all</Link>
             </div>
             <div className={styles.text}>
               <h3>{SinglePortfolioProject.name}</h3>

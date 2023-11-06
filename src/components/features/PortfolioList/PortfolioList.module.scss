@@ -1,4 +1,5 @@
 @import '../../../styles/settings.scss';
+@import '../../../styles/keyframes.scss';
 
 ul {
     display: flex;
@@ -37,6 +38,7 @@ ul {
             height: 100%;
             border-radius: 10px;
             background: rgba(0, 0, 0, 0.5);
+            /* animation: .5s .5s background_pulse infinite alternate both; */
             transition: $transition;
             &:hover {
               cursor: pointer;
@@ -53,7 +55,7 @@ ul {
 
 
     }
-    .last {
+    li:last-of-type {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -61,6 +63,7 @@ ul {
       background-image: linear-gradient(90deg, $color-success 50% , rgba(0, 0, 0, 0.5) 50%);
       background-position: 100% 0;
       background-size: 300% 300%;
+      animation: 1s 1s standby infinite alternate both;
       transition: $transition;
       h5, h6 {
         height: auto;

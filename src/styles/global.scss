@@ -41,12 +41,13 @@ main {
       justify-content: center;
       align-items: center;
       color: $color-light;  
-      transition: $transition;
-      h2 {
+      transition-duration: $transition-time;
+        h2 {
         font-family: $font-pixelify;
         font-size: $base-size * 6;
         height: auto;
-        transition: $transition;
+        transition-property: color, z-index, transform;
+        transition-duration: $transition-time;
       }
       &.background_text_active {
         color: $color-warning;  
@@ -76,8 +77,7 @@ main {
 
 a:link {
   text-decoration: none;
-  transition: $transition;
-}
+  transition-duration: $transition-time;}
 
 ul {
   list-style-type: none;
