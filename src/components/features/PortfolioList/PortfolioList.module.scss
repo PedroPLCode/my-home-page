@@ -2,17 +2,26 @@
 @import '../../../styles/keyframes.scss';
 
 ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: $base-size;
+  height: 100%;
+  width: 100%;
+  padding-right: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, calc(25% - $base-size));
+  grid-template-rows: repeat(2, calc(50% - $base-size));
+  gap: $base-size;
 
-    li {
+  @media (max-width: 960px) {
+    grid-template-columns: repeat(2, calc(50% - $base-size));
+    grid-template-rows: repeat(4, calc(25% - $base-size));
+  }
+
+    li {  
+      align-self: stretch;
+      justify-self: stretch;
         border: 3px solid $color-success;
         border-radius: 10px;
-        width: 32%;
-        height: 100px;
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -56,6 +65,8 @@ ul {
 
     }
     li:last-of-type {
+      grid-row: 2;
+      grid-column: 3 / 5;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -63,8 +74,14 @@ ul {
       background-image: linear-gradient(90deg, $color-success 50% , rgba(0, 0, 0, 0.5) 50%);
       background-position: 100% 0;
       background-size: 300% 300%;
-      animation: 1s 1s standby infinite alternate both;
+
       transition: $transition;
+
+      @media (max-width: 960px) {
+        grid-row: 4;
+        grid-column: 1 / 3;
+        /* transition: none; */
+      }
       h5, h6 {
         height: auto;
         width: auto;
@@ -79,6 +96,7 @@ ul {
       &:hover {
         cursor: pointer;
         background-position: 0 100%;
+        animation: 1s 1s standby infinite alternate both;
       }
       &:hover h5 {
         color: rgba(0, 0, 0, 0.5);

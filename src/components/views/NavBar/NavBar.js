@@ -1,10 +1,8 @@
 import Navbar from 'react-bootstrap/Navbar';
-import { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import ContactCanvas from '../../features/ContactCanvas/ContactCanvas';
 import styles from './NavBar.module.scss'; 
 import HamburgerMenu from '../../features/HamburgerMenu/HamburgerMenu';
-import clsx from 'clsx';
 
 const NavBar = props => {
 

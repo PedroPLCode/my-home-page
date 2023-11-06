@@ -1,8 +1,3 @@
-//import { Envelope, Telephone, Instagram, Linkedin, Github} from 'react-bootstrap-icons';
-//import Row from 'react-bootstrap/Row';
-//import { Link } from 'react-router-dom';
-//import { Container } from 'react-bootstrap';
-//import { clsx } from 'clsx';
 import Col from 'react-bootstrap/Col';
 import styles from './AboutMePage.module.scss';
 import AccordionItem from '../../features/AccordionItem/AccordionItem';
