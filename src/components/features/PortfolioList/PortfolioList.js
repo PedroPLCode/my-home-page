@@ -1,6 +1,8 @@
 import SinglePortfolioProjectOverview from '../../features/SinglePortfolioProjectOverview/SinglePortfolioProjectOverview';
 import portfolioDetails from '../../../portfolioDetails.js';
 import styles from './PortfolioList.module.scss';
+import { useState } from 'react';
+import clsx from 'clsx';
 
 const PortfolioList = props => {
 
@@ -14,6 +16,7 @@ const PortfolioList = props => {
                                             name={project.name}
                                             techs={project.techs}
                                             desc={project.desc}
+                                            image={project.image}
                                             gitHubLink={project.githublink}
                                             liveLink={project.livelink} 
                                             setShowNavMenu={props.setShowNavMenu} closeHamburger={props.closeHamburger} showNavMenu={props.showNavMenu}

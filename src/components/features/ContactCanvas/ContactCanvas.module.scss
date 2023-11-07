@@ -30,7 +30,7 @@
     background-position: 100% 0;
     background-size: 300% 300%;
     background-image: linear-gradient(90deg, $color-success 50%, transparent 50%);
-    animation: standby .5s .5s infinite alternate both;
+    animation: standby 1s 1s infinite alternate both;
     transition-duration: $transition-time;
     transition-property: background-color, background-position, color;
       &:hover {
@@ -38,7 +38,7 @@
       background-color: $color-success;
       color: rgba(0, 0, 0, 1);        
       background-position: 0 100%;
-      animation: pulse 1s 1s infinite alternate both;
+      animation: pulse .5s .5s infinite alternate both;
     }
   }  
 }
