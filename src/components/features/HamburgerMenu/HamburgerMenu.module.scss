@@ -14,7 +14,7 @@
     transition-property: background-color;
     
     &:hover .bar {
-      background-color: $color-warning;
+      background-color: $color-four;
       animation: 1s .2s hamburger_hover infinite alternate both;
     }
   }
@@ -22,7 +22,7 @@
   .bar {
     height: 5px;
     width: 100%;
-    background-color: $color-success;
+    background-color: $color-three;
     display: block;
     border-radius: 5px;
     transition-duration: $transition-time;
@@ -88,7 +88,7 @@
   }
   
   .change .bar {
-    background-color: $color-success;
+    background-color: $color-three;
   }
   
   .changeBg {
@@ -99,7 +99,7 @@
   }
   
   .nav_link {
-    color: $color-success;
+    color: $color-three;
     font-size: ($base-size * 1.6);
     transition-duration: $transition-time;
     transition-property: transform, font-weight;

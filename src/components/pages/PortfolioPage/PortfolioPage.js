@@ -5,11 +5,11 @@ import PortfolioList from '../../features/PortfolioList/PortfolioList';
 
 const PortfolioPage = props => {
 
-    return (
-      <Container className={clsx(styles.portfolio_page)}>
-        <PortfolioList setShowNavMenu={props.setShowNavMenu} closeHamburger={props.closeHamburger} showNavMenu={props.showNavMenu} />
-      </Container>
-    );
-  }
+  return (
+    <Container className={clsx(styles.portfolio_page)}>
+      <PortfolioList setShowNavMenu={props.setShowNavMenu} closeHamburger={props.closeHamburger} showNavMenu={props.showNavMenu} />
+    </Container>
+  );
+}
     
-  export default PortfolioPage;
+export default PortfolioPage;

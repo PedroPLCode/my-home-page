@@ -16,14 +16,6 @@ const App = () => {
   const [instagramIconHover, setInstagramIconHover] = useState(false);
   const [githubIconHover, setGithubIconHover] = useState(false);
 
-  const location = useLocation();
-  const [displayLocation, setDisplayLocation] = useState(location);
-  const [transitionStage, setTransistionStage] = useState("fadeIn");
-
-  useEffect(() => {
-    if (location !== displayLocation) setTransistionStage("fadeOut");
-  }, [location, displayLocation]);
-
   const changeLinkedInTextOn = () => {
     setLinkedInIconHover(true);
   }
@@ -43,6 +35,14 @@ const App = () => {
     setGithubIconHover(false);
   }
 
+  const location = useLocation();
+  const [displayLocation, setDisplayLocation] = useState(location);
+  const [transitionStage, setTransistionStage] = useState("fadeIn");
+
+  useEffect(() => {
+    if (location !== displayLocation) setTransistionStage("fadeOut");
+  }, [location, displayLocation]);
+
   const [showNavMenu, setShowNavMenu] = useState(false);
   const closeHamburger = () => {
     if (showNavMenu) {
@@ -52,7 +52,9 @@ const App = () => {
 
   return (
     <main>
-      <NavBar setShowNavMenu={setShowNavMenu} closeHamburger={closeHamburger} showNavMenu={showNavMenu} />
+      <NavBar setShowNavMenu={setShowNavMenu} 
+              closeHamburger={closeHamburger} 
+              showNavMenu={showNavMenu} />
         <Container className='containter_background'>
           <div className='main_background'>
             <h2>&lt;piotr.gaszczyński&gt;</h2>
@@ -70,8 +72,14 @@ const App = () => {
             <Routes location={displayLocation}>
               <Route path="/" element={<MainPage />} />
               <Route path="/about" element={<AboutMePage />} />
-              <Route path="/portfolio" element={<PortfolioPage setShowNavMenu={setShowNavMenu} closeHamburger={closeHamburger} showNavMenu={showNavMenu} />} />
-              <Route path="/portfolio/:projectId" element={<SinglePortfolioProjectDetails setShowNavMenu={setShowNavMenu} closeHamburger={closeHamburger} showNavMenu={showNavMenu} />} />
+              <Route path="/portfolio" element={<PortfolioPage 
+                     setShowNavMenu={setShowNavMenu} 
+                     closeHamburger={closeHamburger} 
+                     showNavMenu={showNavMenu} />} />
+              <Route path="/portfolio/:projectId" element={<SinglePortfolioProjectDetails 
+                     setShowNavMenu={setShowNavMenu} 
+                     closeHamburger={closeHamburger} 
+                     showNavMenu={showNavMenu} />} />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
           </div>
@@ -79,16 +87,12 @@ const App = () => {
       <Footer changeLinkedInTextOn={changeLinkedInTextOn}
               changeLinkedInTextOff={changeLinkedInTextOff}
               linkedInIconHover={linkedInIconHover}
-
               changeInstagramTextOn={changeInstagramTextOn}
               changeInstagramTextOff={changeInstagramTextOff}
               instagramIconHover={instagramIconHover}
-
               changeGithubTextOn={changeGithubTextOn}
               changeGithubTextOff={changeGithubTextOff}
-              githubIconHover={githubIconHover}
-              
- />
+              githubIconHover={githubIconHover} />
     </main>
   );
 }

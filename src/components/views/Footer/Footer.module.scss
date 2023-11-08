@@ -1,4 +1,5 @@
 @import '../../../styles/settings.scss';
+@import '../../../styles/keyframes.scss';
 
 .footer {
   width: 100%;
@@ -18,10 +19,10 @@
   }
   &__icon {
     font-size: ($base-size * 3);
-    color: $color-success;
+    color: $color-three;
     transition: $transition;
     &:hover {
-      color: $color-warning;
+      color: $color-four;
       transform: scale(1.2) rotate(360deg);
       animation: color_change .5s .5s infinite alternate both;
     }
@@ -35,11 +36,5 @@
       opacity: 1;
       transform: scale(1) translateX(-160px) translateY(3px);
     }
-  }
-}
-  
-@keyframes color_change {
-  100% {
-    color: $color-success;
   }
 }

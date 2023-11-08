@@ -3,6 +3,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import styles from './ContactCanvas.module.scss';
 
 const ContactCanvas = props => {
+  
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => {

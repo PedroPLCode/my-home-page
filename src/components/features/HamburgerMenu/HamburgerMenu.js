@@ -16,12 +16,18 @@ const HamburgerMenu = props => {
   return (
     <div>
       <div className={styles.menu} id="menu" >
-        <div className={clsx(styles.menuBar, props.showNavMenu ? styles.change : '')} id="menuBar" onClick={menuOnClick} >
-          <div id="bar1" className={clsx(styles.bar, styles.bar1, props.showNavMenu ? styles.change : '')}></div>
-          <div id="bar3" className={clsx(styles.bar, styles.bar2, props.showNavMenu ? styles.change : '')}></div>
-          <div id="bar3" className={clsx(styles.bar, styles.bar3, props.showNavMenu ? styles.change : '')}></div>
+        <div className={clsx(styles.menuBar, props.showNavMenu ? styles.change : '')} 
+             id="menuBar" 
+             onClick={menuOnClick} >
+          <div className={clsx(styles.bar, styles.bar1, props.showNavMenu ? styles.change : '')}
+               id="bar1" ></div>
+          <div className={clsx(styles.bar, styles.bar2, props.showNavMenu ? styles.change : '')}
+               id="bar2"></div>
+          <div className={clsx(styles.bar, styles.bar3, props.showNavMenu ? styles.change : '')}
+               id="bar3"></div>
         </div>
-        <nav className={clsx(styles.nav, props.showNavMenu ? styles.change : '')} id="nav">
+        <nav className={clsx(styles.nav, props.showNavMenu ? styles.change : '')} 
+             id="nav">
           <Nav className="" onClick={props.closeHamburger}>
             <Nav.Link as={NavLink} to="/" className={styles.nav_link} >
               home
@@ -35,7 +41,8 @@ const HamburgerMenu = props => {
           </Nav>
         </nav> 
       </div>
-      <div className={clsx(styles.menuBg, props.showNavMenu ? styles.changeBg : '')} id="menuBg" ></div>
+      <div className={clsx(styles.menuBg, props.showNavMenu ? styles.changeBg : '')} 
+           id="menuBg" ></div>
     </div>
   )
 }

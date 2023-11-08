@@ -9,7 +9,9 @@ const NavBar = props => {
   return (
     <Navbar variant="dark" sticky="top" className={styles.nav}>
       <Container className={styles.nav__container}>
-        <HamburgerMenu showNavMenu={props.showNavMenu} setShowNavMenu={props.setShowNavMenu} closeHamburger={props.closeHamburger} changeBackgroundGradientOn={props.changeBackgroundGradientOn} changeBackgroundGradientOff={props.changeBackgroundGradientOff} />
+        <HamburgerMenu showNavMenu={props.showNavMenu} 
+                       setShowNavMenu={props.setShowNavMenu} 
+                       closeHamburger={props.closeHamburger} />
         <ContactCanvas closeHamburger={props.closeHamburger} />
       </Container>
     </Navbar>

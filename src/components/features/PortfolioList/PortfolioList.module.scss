@@ -18,7 +18,7 @@ ul {
     li {  
       align-self: stretch;
       justify-self: stretch;
-        border: 3px solid $color-success;
+        border: 3px solid $color-three;
         border-radius: 10px;
         width: 100%;
         height: 100%;
@@ -33,7 +33,7 @@ ul {
           width: auto;
           font-size: 12px;
           font-weight: bold;
-          color: ($color-success);
+          color: ($color-three);
           transition: $transition;
         }
         h6 {
@@ -72,7 +72,7 @@ ul {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-image: linear-gradient(90deg, $color-success 50% , rgba(0, 0, 0, 0.5) 50%);
+      background-image: linear-gradient(90deg, $color-three 50% , rgba(0, 0, 0, 0.5) 50%);
       background-position: 100% 0;
       background-size: 300% 300%;
 
@@ -88,7 +88,7 @@ ul {
         width: auto;
         font-size: 12px;
         font-weight: bold;
-        color: ($color-success);
+        color: ($color-three);
         transition: $transition;
       }
       h6 {

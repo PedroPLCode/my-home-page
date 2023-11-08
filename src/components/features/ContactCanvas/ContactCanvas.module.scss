@@ -1,10 +1,11 @@
 @import '../../../styles/settings.scss';
+@import '../../../styles/keyframes.scss';
 
 .offcanvas {
   background: none;
   backdrop-filter: brightness(25%);
-  color: $color-success;
-  border: 1px solid $color-success;
+  color: $color-three;
+  border: 1px solid $color-three;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -21,39 +22,24 @@
   &__link {
     margin: auto;
     margin-right: 0;
-    border: $border-size solid $color-success;
+    border: $border-size solid $color-three;
     border-radius: $radius-base;
     padding: $base-size * 0.5;
-    color: $color-success; 
+    color: $color-three; 
     font-size: ($base-size * 1.6);
     font-weight: bold;
     background-position: 100% 0;
     background-size: 300% 300%;
-    background-image: linear-gradient(90deg, $color-success 50%, transparent 50%);
+    background-image: linear-gradient(90deg, $color-three 50%, transparent 50%);
     animation: standby 1s 1s infinite alternate both;
     transition-duration: $transition-time;
     transition-property: background-color, background-position, color;
       &:hover {
       cursor: pointer;
-      background-color: $color-success;
+      background-color: $color-three;
       color: rgba(0, 0, 0, 1);        
       background-position: 0 100%;
       animation: pulse .5s .5s infinite alternate both;
     }
   }  
 }
-
-@keyframes standby {
-  100% {
-    transform: scale(.97);
-  }
-}
-
-@keyframes pulse {
-  100% {
-    border-color: rgba(235, 3, 3, .8);
-    color: rgba(235, 3, 3, .8);
-  }
-}
-
-

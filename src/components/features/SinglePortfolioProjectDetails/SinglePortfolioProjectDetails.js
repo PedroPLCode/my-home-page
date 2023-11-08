@@ -4,14 +4,23 @@ import clsx from 'clsx';
 import { Container } from 'react-bootstrap';
 import styles from './SinglePortfolioProjectDetails.module.scss';
 import { useState } from 'react';
+import creatively from './images/creatively.png';
+import pizzeria from './images/pizzeria.png';
+import blog from './images/blog.png';
+import todo from './images/todo.png';
+import waiter from './images/waiter.png';
+import game from './images/game.png';
 
 const SinglePortfolioProjectDetails = props => {
     
   const { projectId } = useParams();
-  const [borderActive, setBorderActive] = useState(false)
+  const [backgroundActive, setBackgroundActive] = useState(false)
 
-  const changeBorderColor = () => {
-    setBorderActive(!borderActive);
+  const changeBackgroundColorOn = () => {
+    setBackgroundActive(true);
+  }
+  const changeBackgroundColorOff = () => {
+    setBackgroundActive(false);
   }
 
   let projectFound = false;
@@ -19,23 +28,46 @@ const SinglePortfolioProjectDetails = props => {
   for (let SinglePortfolioProject of portfolioDetails) {
     if (SinglePortfolioProject.link === projectId) {
       projectFound = true;
+      let background;
+      if (SinglePortfolioProject.image === 'pizzeria.png') {
+        background = pizzeria;
+      } else if (SinglePortfolioProject.image === 'blog.png') {
+        background = blog;
+      } else if (SinglePortfolioProject.image === 'waiter.png') {
+        background = waiter;
+      } else if (SinglePortfolioProject.image === 'todo.png') {
+        background = todo;
+      } else if (SinglePortfolioProject.image === 'creatively.png') {
+        background = creatively;
+      } else if (SinglePortfolioProject.image === 'game.png') {
+        background = game;
+      }
       return (
-        <div className={clsx(styles.wrapper, borderActive ? styles.border_active : '')}>
-          <div className={clsx(styles.project_details, borderActive ? styles.border_active : '')}>
+        <div className={clsx(styles.wrapper)}
+             style={{backgroundImage: `url(${background})`}}>
+          <div className={clsx(styles.project_details)}
+          style={{animation: backgroundActive ? `background_onHover 3s 3s infinite alternate both` : `background_pulse 3s 3s infinite alternate both`}}>
             <div className={styles.buttons}>
               <Link to='/portfolio' onClick={props.closeHamburger} >back to all</Link>
             </div>
-            <div className={styles.text}>
+            <div className={styles.text}
+                 style={{opacity: backgroundActive ? 0 : 1}}>
               <h3>{SinglePortfolioProject.name}</h3>
               <h3>{SinglePortfolioProject.desc}</h3>
               <h3>{SinglePortfolioProject.techs}</h3>
             </div>
             <div className={styles.buttons}>
-              <Link to={SinglePortfolioProject.gitHubLink} target='_blank' onMouseEnter={changeBorderColor} onMouseLeave={changeBorderColor}>
-                Git Hub repo
+              <Link to={SinglePortfolioProject.gitHubLink} 
+                    target='_blank' 
+                    onMouseEnter={changeBackgroundColorOn}
+                    onMouseLeave={changeBackgroundColorOff} >
+                    Git Hub repo
               </Link>
-              <Link to={SinglePortfolioProject.liveLink} target='_blank' onMouseEnter={changeBorderColor} onMouseLeave={changeBorderColor}>
-                live project
+              <Link to={SinglePortfolioProject.liveLink} 
+                    target='_blank' 
+                    onMouseEnter={changeBackgroundColorOn}
+                    onMouseLeave={changeBackgroundColorOff} >
+                    live project
               </Link>
             </div>
           </div>
@@ -45,7 +77,7 @@ const SinglePortfolioProjectDetails = props => {
   }
   if (!projectFound) {
     return (
-      <Container className={clsx(styles.wrapper, borderActive ? styles.border_active : '')}>
+      <Container className={clsx(styles.wrapper)}>
         <div className={clsx(styles.project_details)}>
           <Link to='/portfolio' >back</Link>
           <h3>PROJECT NOT FOUND</h3>

@@ -4,7 +4,7 @@
 .wrapper {
   height: 70vh;
   width: 90%;
-  border: 3px solid $color-success;
+  border: 3px solid $color-three;
   border-radius: $radius-base;
   display: flex;
   flex-direction: row;
@@ -15,13 +15,14 @@
     height: 100%;
     width: 100%;
     transition: $transition;
-    background: rgba(0, 0, 0, 0.5);
-    animation: background_pulse 3s 3s infinite alternate both;
+    /* background: rgba(0, 0, 0, 0.75); 
+    animation: background_pulse 3s 3s infinite alternate both; */
     border-radius: $radius-base;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: space-between;
+    transition: $transition;
     .buttons {
       width: 100%;
       display: flex;
@@ -29,7 +30,7 @@
       justify-content: flex-end;
       align-items: center;
       a {
-        color: $color-success;
+        color: $color-three;
         margin: $base-size $base-size $base-size 0;
         height: $base-size * 4;
         width: $base-size * 12;
@@ -37,9 +38,9 @@
         border-radius: $radius-base;
         text-align: center;
         font-weight: bold;
-        border: 3px solid $color-success;
+        border: 3px solid $color-three;
         border-radius: $radius-base;
-        background-image: linear-gradient(90deg, $color-success 50% , rgba(0, 0, 0, 0) 50%);
+        background-image: linear-gradient(90deg, $color-three 50% , rgba(0, 0, 0, 0) 50%);
         background-position: 100% 0;
         background-size: 300% 300%;
         /* animation: standby .5s .5s infinite alternate both; */
@@ -57,29 +58,14 @@
         }
     }
     .text {
+      transition: $transition;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      h3 {
+        font-weight: bold;
+      }
     }
-
-    }
-    &.border_active {
- 
-
-    }  
-  
-}
-
-@keyframes standby {
-  100% {
-    transform: scale(0.98);
-  }
-}
-
-@keyframes pulse {
-  100% {
-    border-color: rgba(235, 3, 3, .8);
-    color: rgba(235, 3, 3, .8);
-  }
+  }  
 }
