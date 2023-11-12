@@ -1,14 +1,15 @@
 import SinglePortfolioProjectOverview from '../../features/SinglePortfolioProjectOverview/SinglePortfolioProjectOverview';
-import portfolioDetails from '../../../portfolioDetails.js';
+import { projectsDetails, links } from '../../../settings.js';
 import styles from './PortfolioList.module.scss';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 
 const PortfolioList = props => {
-
+console.log(projectsDetails)
   return (      
     <ul>
-      {portfolioDetails.map(project => 
+      {projectsDetails.map(project => 
         <li>
           <div>
             <SinglePortfolioProjectOverview key={project.name}
@@ -25,8 +26,10 @@ const PortfolioList = props => {
         </li>
       )}
         <li className={styles.last} onClick={props.closeHamburger} >
-          <h5>And more</h5>
-          <h6>Ask me for more</h6>
+          <Link to='https://github.com/PedroPLCode/' target="_blank">
+            <h5>And more</h5>
+            <h6>See my GitHub profile</h6>
+          </Link>
         </li>
     </ul>
   );

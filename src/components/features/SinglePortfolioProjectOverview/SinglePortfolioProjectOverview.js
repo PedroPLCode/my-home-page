@@ -8,6 +8,7 @@ import blog from './images/blog.png';
 import todo from './images/todo.png';
 import waiter from './images/waiter.png';
 import game from './images/game.png';
+import calculator from './images/calculator.png';
 
 const SinglePortfolioProjectOverview = props => {
 
@@ -24,6 +25,8 @@ const SinglePortfolioProjectOverview = props => {
     background = creatively;
   } else if (props.image === 'game.png') {
     background = game;
+  } else if (props.image === 'calculator.png') {
+    background = calculator;
   }
     
   const [isHover, setIsHover] = useState(false);

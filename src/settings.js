@@ -1,4 +1,4 @@
-const portfolioDetails =  [
+export const projectsDetails =  [
   {
     link: 'waiter', // REPLIT FAILED
     name: 'Waiter App',
@@ -52,7 +52,20 @@ const portfolioDetails =  [
     image: 'creatively.png',
     gitHubLink: 'https://github.com/PedroPLCode/1.creatively.git',
     liveLink: 'https://project-223286.kodilla.com/'
+  },
+    {
+    link: 'calculator', // REPLIT
+    name: 'Calculator',
+    techs: 'HTML CSS JavaScript',
+    desc: 'Simple calculator',
+    image: 'calculator.png',
+    gitHubLink: 'https://github.com/PedroPLCode/calculator.js.git',
+    liveLink: 'https://onet.pl/'
   }
 ]
 
-export default portfolioDetails;
+export const links = {
+  myGitHubLink: 'https://github.com/PedroPLCode/',
+  myInstagramLink: 'https://github.com/PedroPLCode/',
+  myLinkedInLink: 'https://github.com/PedroPLCode/',
+}

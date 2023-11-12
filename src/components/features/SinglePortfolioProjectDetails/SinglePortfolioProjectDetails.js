@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import portfolioDetails from '../../../portfolioDetails.js';
+import { projectsDetails, links } from  '../../../settings.js';
 import clsx from 'clsx';
 import { Container } from 'react-bootstrap';
 import styles from './SinglePortfolioProjectDetails.module.scss';
@@ -10,6 +10,7 @@ import blog from './images/blog.png';
 import todo from './images/todo.png';
 import waiter from './images/waiter.png';
 import game from './images/game.png';
+import calculator from './images/calculator.png';
 
 const SinglePortfolioProjectDetails = props => {
     
@@ -24,8 +25,8 @@ const SinglePortfolioProjectDetails = props => {
   }
 
   let projectFound = false;
-
-  for (let SinglePortfolioProject of portfolioDetails) {
+  
+  for (let SinglePortfolioProject of projectsDetails) {
     if (SinglePortfolioProject.link === projectId) {
       projectFound = true;
       let background;
@@ -41,6 +42,8 @@ const SinglePortfolioProjectDetails = props => {
         background = creatively;
       } else if (SinglePortfolioProject.image === 'game.png') {
         background = game;
+      } else if (SinglePortfolioProject.image === 'calculator.png') {
+        background = calculator;
       }
       return (
         <div className={clsx(styles.wrapper)}
