@@ -33,7 +33,16 @@
 }
 
 @keyframes color_change {
-  100% {
+  0% {
+    color: $color-four;
+  }
+  50% {
     color: $color-three;
+  }
+  70% {
+    color: $color-four;
+  }
+  100% {
+    color: $color-four;
   }
 }

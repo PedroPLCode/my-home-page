@@ -1,11 +1,12 @@
 import Accordion from 'react-bootstrap/Accordion';
+import styles from './AccordionItem.module.scss';
 
 function AccordionItem() {
   return (
-    <Accordion flush>
-      <Accordion.Item eventKey="0">
-        <Accordion.Header>Accordion Item #1</Accordion.Header>
-        <Accordion.Body>
+    <Accordion className={styles.accordion__main} flush>
+      <Accordion.Item className={styles.accordion__item} eventKey="0">
+        <Accordion.Header className={styles.accordion__header} >Accordion Item #1</Accordion.Header>
+        <Accordion.Body className={styles.accordion__body}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -15,9 +16,9 @@ function AccordionItem() {
           culpa qui officia deserunt mollit anim id est laborum.
         </Accordion.Body>
       </Accordion.Item>
-      <Accordion.Item eventKey="1">
-        <Accordion.Header>Accordion Item #2</Accordion.Header>
-        <Accordion.Body>
+      <Accordion.Item className={styles.accordion__item} eventKey="1">
+        <Accordion.Header className={styles.accordion__header}>Accordion Item #2</Accordion.Header>
+        <Accordion.Body className={styles.accordion__body}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
