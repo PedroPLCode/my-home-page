@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&family=Roboto:wght@300;900&display=swap');
 
+$media-border: 720px;
+
 $color-one: #010d80;
 $color-two: #178ea3;
-
-$color-three: #ffd103;
+$color-three: #972297;
 $color-four: #e1644e;
+
+$background-image: url(../images/bkgr_large.jpg);
+@media (max-width: $media-border) {
+  $background-image: url(../images/bkgr_small.jpg);
+}
 
 $font-pixelify: 'Pixelify Sans', cursive;
 $font-roboto: 'Roboto', sans-serif;

@@ -3,4 +3,6 @@
 .about_me_page {
   height: 75vh;
   width: 100%;
+  background: rgba(0, 0, 0, 0.75); 
+  border-radius: $radius-base;
 }

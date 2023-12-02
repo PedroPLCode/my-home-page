@@ -3,6 +3,8 @@
 .page_not_found {
   height: 75vh;
   width: 100%;
+  background: rgba(0, 0, 0, 0.75); 
+  border-radius: $radius-base;
   display: flex;
   flex-direction: column;
   justify-content: center;

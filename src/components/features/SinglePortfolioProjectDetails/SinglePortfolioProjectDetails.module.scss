@@ -4,7 +4,6 @@
 .wrapper {
   height: 70vh;
   width: 90%;
-  border: 3px solid $color-three;
   border-radius: $radius-base;
   display: flex;
   flex-direction: row;
@@ -15,8 +14,8 @@
     height: 100%;
     width: 100%;
     transition: $transition;
-    /* background: rgba(0, 0, 0, 0.75); 
-    animation: background_pulse 3s 3s infinite alternate both; */
+    background: rgba(0, 0, 0, 0.75); 
+    animation: background_pulse 3s 3s infinite alternate both;
     border-radius: $radius-base;
     display: flex;
     flex-direction: column;

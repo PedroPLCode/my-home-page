@@ -3,7 +3,6 @@ import { projectsDetails, links } from  '../../../settings.js';
 import clsx from 'clsx';
 import { Container } from 'react-bootstrap';
 import styles from './SinglePortfolioProjectDetails.module.scss';
-import { useState } from 'react';
 import creatively from './images/creatively.png';
 import pizzeria from './images/pizzeria.png';
 import blog from './images/blog.png';
@@ -15,14 +14,6 @@ import calculator from './images/calculator.png';
 const SinglePortfolioProjectDetails = props => {
     
   const { projectId } = useParams();
-  const [backgroundActive, setBackgroundActive] = useState(false)
-
-  const changeBackgroundColorOn = () => {
-    setBackgroundActive(true);
-  }
-  const changeBackgroundColorOff = () => {
-    setBackgroundActive(false);
-  }
 
   let projectFound = false;
   
@@ -48,28 +39,22 @@ const SinglePortfolioProjectDetails = props => {
       return (
         <div className={clsx(styles.wrapper)}
              style={{backgroundImage: `url(${background})`}}>
-          <div className={clsx(styles.project_details)}
-          style={{animation: backgroundActive ? `background_onHover 3s 3s infinite alternate both` : `background_pulse 3s 3s infinite alternate both`}}>
+          <div className={clsx(styles.project_details)}>
             <div className={styles.buttons}>
               <Link to='/portfolio' onClick={props.closeHamburger} >back to all</Link>
             </div>
-            <div className={styles.text}
-                 style={{opacity: backgroundActive ? 0 : 1}}>
+            <div className={styles.text}>
               <h3>{SinglePortfolioProject.name}</h3>
               <h3>{SinglePortfolioProject.desc}</h3>
               <h3>{SinglePortfolioProject.techs}</h3>
             </div>
             <div className={styles.buttons}>
               <Link to={SinglePortfolioProject.gitHubLink} 
-                    target='_blank' 
-                    onMouseEnter={changeBackgroundColorOn}
-                    onMouseLeave={changeBackgroundColorOff} >
+                    target='_blank' >
                     Git Hub repo
               </Link>
               <Link to={SinglePortfolioProject.liveLink} 
-                    target='_blank' 
-                    onMouseEnter={changeBackgroundColorOn}
-                    onMouseLeave={changeBackgroundColorOff} >
+                    target='_blank' >
                     live project
               </Link>
             </div>
