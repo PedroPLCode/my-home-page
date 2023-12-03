@@ -46,7 +46,8 @@ main {
       transition-duration: $transition-time;
         h2 {
         font-family: $font-pixelify;
-        font-size: $base-size * 6;
+        font-size: calc($base-size * 6);
+        text-shadow: 4px 8px 4px $color-one;
         height: auto;
         @media (max-width: 720px) {
           font-size: $base-size * 3;

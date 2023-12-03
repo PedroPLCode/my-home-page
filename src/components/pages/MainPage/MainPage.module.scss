@@ -1,9 +1,10 @@
 @import '../../../styles/settings.scss';
 
 .main_page {
-  height: 75vh;
+  height: 65vh;
   width: 100%;
-  background: rgba(0, 0, 0, 0.75); 
+  background: $transparent-background;
+  box-shadow: 0 0 5px 10px $transparent-background;
   border-radius: $radius-base;
   display: flex;
   flex-direction: column;

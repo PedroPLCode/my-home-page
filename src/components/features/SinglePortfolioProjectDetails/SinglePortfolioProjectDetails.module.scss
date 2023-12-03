@@ -14,7 +14,7 @@
     height: 100%;
     width: 100%;
     transition: $transition;
-    background: rgba(0, 0, 0, 0.75); 
+    background: none;
     animation: background_pulse 3s 3s infinite alternate both;
     border-radius: $radius-base;
     display: flex;

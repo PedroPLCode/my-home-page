@@ -7,6 +7,8 @@ $color-two: #178ea3;
 $color-three: #972297;
 $color-four: #e1644e;
 
+$transparent-background: rgba(0, 0, 0, 0.5);
+
 $background-image: url(../images/bkgr_large.jpg);
 @media (max-width: $media-border) {
   $background-image: url(../images/bkgr_small.jpg);

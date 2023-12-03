@@ -9,6 +9,7 @@
   bottom: 0;
   background: none;
   backdrop-filter: brightness(50%);
+  box-shadow: 0 0 5px 10px $transparent-background;
   &__container {
     height: 100%;
     display: flex;

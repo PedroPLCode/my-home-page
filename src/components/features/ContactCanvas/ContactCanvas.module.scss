@@ -2,15 +2,14 @@
 @import '../../../styles/keyframes.scss';
 
 .offcanvas {
-  background: none;
-  backdrop-filter: brightness(25%);
+  background: $transparent-background;
+  box-shadow: 0 0 5px 10px $transparent-background;
   color: $color-three;
-  border: 1px solid $color-three;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center ;
+  justify-content: center;
 }
 
 .contact {
