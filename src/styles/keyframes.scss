@@ -27,8 +27,7 @@
   
 @keyframes pulse {
   100% {
-    border-color: $color-four;
-    color: $color-four;
+    box-shadow: 0 0 10px 5px $color-three;
   }
 }
 

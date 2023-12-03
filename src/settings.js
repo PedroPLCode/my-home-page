@@ -1,5 +1,14 @@
 export const projectsDetails =  [
   {
+    link: 'foodapp', // OK
+    name: 'Food Search App',
+    techs: 'JavaScript React Redux HTML CSS',
+    desc: 'Small App to looking for new meal recipes.',
+    image: 'waiter.png',
+    gitHubLink: 'https://github.com/PedroPLCode/16.waiter-app.git',
+    liveLink: 'https://food.zlasuceramika.pl'
+  },
+  {
     link: 'waiter', // REPLIT FAILED
     name: 'Waiter App',
     techs: 'JavaScript React Redux HTML CSS',
@@ -53,15 +62,6 @@ export const projectsDetails =  [
     gitHubLink: 'https://github.com/PedroPLCode/1.creatively.git',
     liveLink: 'https://project-223286.kodilla.com/'
   },
-    {
-    link: 'calculator', // REPLIT
-    name: 'Calculator',
-    techs: 'HTML CSS JavaScript',
-    desc: 'Simple calculator',
-    image: 'calculator.png',
-    gitHubLink: 'https://github.com/PedroPLCode/calculator.js.git',
-    liveLink: 'https://onet.pl/'
-  }
 ]
 
 export const links = {

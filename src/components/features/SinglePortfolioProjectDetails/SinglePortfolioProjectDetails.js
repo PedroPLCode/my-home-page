@@ -3,13 +3,6 @@ import { projectsDetails, links } from  '../../../settings.js';
 import clsx from 'clsx';
 import { Container } from 'react-bootstrap';
 import styles from './SinglePortfolioProjectDetails.module.scss';
-import creatively from './images/creatively.png';
-import pizzeria from './images/pizzeria.png';
-import blog from './images/blog.png';
-import todo from './images/todo.png';
-import waiter from './images/waiter.png';
-import game from './images/game.png';
-import calculator from './images/calculator.png';
 
 const SinglePortfolioProjectDetails = props => {
     
@@ -20,28 +13,14 @@ const SinglePortfolioProjectDetails = props => {
   for (let SinglePortfolioProject of projectsDetails) {
     if (SinglePortfolioProject.link === projectId) {
       projectFound = true;
-      let background;
-      if (SinglePortfolioProject.image === 'pizzeria.png') {
-        background = pizzeria;
-      } else if (SinglePortfolioProject.image === 'blog.png') {
-        background = blog;
-      } else if (SinglePortfolioProject.image === 'waiter.png') {
-        background = waiter;
-      } else if (SinglePortfolioProject.image === 'todo.png') {
-        background = todo;
-      } else if (SinglePortfolioProject.image === 'creatively.png') {
-        background = creatively;
-      } else if (SinglePortfolioProject.image === 'game.png') {
-        background = game;
-      } else if (SinglePortfolioProject.image === 'calculator.png') {
-        background = calculator;
-      }
       return (
-        <div className={clsx(styles.wrapper)}
-             style={{backgroundImage: `url(${background})`}}>
-          <div className={clsx(styles.project_details)}>
+        <div className={styles.wrapper}>
+          <div className={styles.iframe_wrapper}>
+            <iframe title={SinglePortfolioProject.name} type="text/html" src={SinglePortfolioProject.liveLink} className={styles.iframe}></iframe>
+          </div>
+          <div className={styles.project_details}>
             <div className={styles.buttons}>
-              <Link to='/portfolio' onClick={props.closeHamburger} >back to all</Link>
+              <Link to='/portfolio' onClick={props.closeHamburger} >back to all projects</Link>
             </div>
             <div className={styles.text}>
               <h3>{SinglePortfolioProject.name}</h3>

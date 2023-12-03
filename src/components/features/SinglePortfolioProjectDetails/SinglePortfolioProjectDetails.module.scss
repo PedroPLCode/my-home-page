@@ -2,37 +2,96 @@
 @import '../../../styles/keyframes.scss';
 
 .wrapper {
-  height: 70vh;
+  height: 65vh;
   width: 90%;
   border-radius: $radius-base;
+  background: $transparent-background;
+  /* animation: background_pulse 3s 3s infinite alternate both; */
+  box-shadow: 0 0 5px 10px $transparent-background;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: $base-size;
   transition: $transition;
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+
+  .iframe_wrapper {
+    height: 200%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: $base-size;
+
+    @media (max-width: 960px) {
+      flex-direction: row;
+      height: 50%;
+      width: 200%;
+      padding-bottom: 0px;
+    }
+
+    .iframe {
+      height: 100%;
+      width: 200%;
+      transform: scale(0.5, 0.5);
+      border-radius: calc($radius-base * 2);
+      overflow: hidden;
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      @media (max-width: 960px) {
+        height: 200%;
+        width: 100%;
+        transform: scale(0.5, 0.5);
+        padding-bottom: 0px;
+      }
+    }
+  }
+
   .project_details {
     height: 100%;
-    width: 100%;
+    width: 40%;
     transition: $transition;
-    background: none;
-    animation: background_pulse 3s 3s infinite alternate both;
     border-radius: $radius-base;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: space-between;
     transition: $transition;
+
+    h3 {
+      text-align: center;
+    }
+
+    @media (max-width: 960px) {
+      height: 50%;
+      width: 100%;      
+      margin-left: $base-size * 2;
+      margin-right: 0px;
+      padding-right: 0px;
+    }
+
     .buttons {
       width: 100%;
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
       align-items: center;
+
       a {
         color: $color-three;
-        margin: $base-size $base-size $base-size 0;
+        margin: calc($base-size / 2) calc($base-size * 2) calc($base-size / 2) 0;
         height: $base-size * 4;
-        width: $base-size * 12;
+        width: 100%;
         padding: $base-size;
         border-radius: $radius-base;
         text-align: center;
@@ -45,23 +104,27 @@
         /* animation: standby .5s .5s infinite alternate both; */
         transition-property: background-position, color, text-shadow, box-shadow;
         transition-duration: $transition-time;
-        &:first-of-type {
+
+      &:first-of-type {
   
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-position: 0 100%;
+        color: rgba(0, 0, 0, 1);
+        animation: pulse 1s 1s infinite alternate both;
         }
-        &:hover {
-          cursor: pointer;
-          background-position: 0 100%;
-          color: rgba(0, 0, 0, 1);
-          animation: pulse 1s 1s infinite alternate both;
-          }
-        }
+      }
     }
+
     .text {
       transition: $transition;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
       h3 {
         font-weight: bold;
       }

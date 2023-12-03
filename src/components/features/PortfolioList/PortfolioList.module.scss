@@ -99,10 +99,10 @@ ul {
           animation: .5s .5s standby infinite alternate both;
         }
         &:hover h5 {
-          color: rgba(0, 0, 0, 0.5);
+          transform: scale(2);
         }
         &:hover h6 {
-          color: rgba(0, 0, 0, 0.5);
+          transform: scale(1.5);
         }
       }
     }
