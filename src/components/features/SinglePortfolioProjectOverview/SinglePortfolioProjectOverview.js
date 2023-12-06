@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 import styles from './SinglePortfolioProjectOverview.module.scss';
 import { useState } from 'react';
-import clsx from 'clsx';
 import creatively from './images/creatively.png';
 import pizzeria from './images/pizzeria.png';
 import blog from './images/blog.png';
-import todo from './images/todo.png';
+import git from './images/git.png';
 import waiter from './images/waiter.png';
 import game from './images/game.png';
 import calculator from './images/calculator.png';
+import food from './images/food.png';
 
 const SinglePortfolioProjectOverview = props => {
 
@@ -19,14 +19,16 @@ const SinglePortfolioProjectOverview = props => {
     background = blog;
   } else if (props.image === 'waiter.png') {
     background = waiter;
-  } else if (props.image === 'todo.png') {
-    background = todo;
+  } else if (props.image === 'git.png') {
+    background = git;
   } else if (props.image === 'creatively.png') {
     background = creatively;
   } else if (props.image === 'game.png') {
     background = game;
   } else if (props.image === 'calculator.png') {
     background = calculator;
+  } else if (props.image === 'food.png') {
+    background = food;
   }
     
   const [isHover, setIsHover] = useState(false);
@@ -41,8 +43,8 @@ const SinglePortfolioProjectOverview = props => {
 
   return (
     <Link to={props.link}
-          style={{backgroundImage: isHover ? `url(${background})` : ''}} 
-          className={clsx("p-3 d-flex flex-column justify-content-center align-items-center", styles.project_overview)} onClick={props.closeHamburger}
+          style={{backgroundImage: isHover || window.screen.width <= 920 ? `url(${background})` : ''}} 
+          className={styles.project_overview} onClick={props.closeHamburger}
           onMouseEnter={hoverOn} 
           onMouseLeave={hoverOut} >
       <h5>{props.name}</h5>

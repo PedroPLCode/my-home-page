@@ -1,7 +1,6 @@
 import styles from './HamburgerMenu.module.scss';
 import { NavLink } from 'react-router-dom';
 import { Nav } from 'react-bootstrap';
-import { useState } from 'react';
 import clsx from 'clsx';
 
 const HamburgerMenu = props => {

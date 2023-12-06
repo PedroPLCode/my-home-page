@@ -1,4 +1,5 @@
 @import '../../../styles/settings.scss';
+@import '../../../styles//keyframes.scss';
 
 .main_page {
   height: 65vh;
@@ -12,5 +13,8 @@
   align-items: center;
   p {
     font-size: $base-size * 3;
+    font-weight: bold;
+    text-align: center;
+    animation: text_standby 2s infinite alternate both;
   }
 }

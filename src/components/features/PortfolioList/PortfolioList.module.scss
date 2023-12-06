@@ -68,10 +68,7 @@ ul {
 
     }
     li:last-of-type {
-      background-image: linear-gradient(90deg, $color-three 50% , rgba(0, 0, 0, 0.5) 50%);
-      background-position: 100% 0;
-      background-size: 300% 300%;
-
+      background: $transparent-background;
       transition: $transition;
 
       a {
@@ -82,27 +79,34 @@ ul {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         h5, h6 {
           height: auto;
           width: auto;
           font-size: 12px;
           font-weight: bold;
           color: ($color-three);
-          transition: $transition;
+          transition-property: transform, color;
+          transition-duration: $transition-time;
         }
+
         h6 {
           font-size: 16px;
         }
+
         &:hover {
           cursor: pointer;
-          background-position: 0 100%;
           animation: .5s .5s standby infinite alternate both;
         }
+        
         &:hover h5 {
           transform: scale(2);
+          color: $color-two;
         }
+
         &:hover h6 {
           transform: scale(1.5);
+          color: $color-two;
         }
       }
     }

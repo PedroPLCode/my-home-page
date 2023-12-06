@@ -4,9 +4,9 @@ const AboutMePage = () => {
 
   return (
     <div className={styles.about_me_page}>        
-      <h3>AboutMePage component</h3>
-      <h5>My Front End skills JAVASCRIPT. REACT.JS. Redux. HTML. CSS. SCSS. Flexbox. Grid. Bootstrap. RWD. React Router.</h5>
-      <h5>My Back End skills SOON.. Python Flask Django</h5>
+      <h3>About Me</h3>
+      <h5>My Front End skills<br/>JAVASCRIPT.<br/>REACT.JS.<br/>React Router.<br/>Redux.<br/>HTML.<br/>CSS.<br/>SCSS.<br/>Flexbox.<br/>Grid.<br/>Bootstrap.<br/>RWD.</h5>
+      <h5>My Back End skills<br/>SOON..<br/>Python.<br/>Flask.<br/>Django.</h5>
     </div>
   );
 }

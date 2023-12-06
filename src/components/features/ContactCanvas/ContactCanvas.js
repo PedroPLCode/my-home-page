@@ -27,11 +27,11 @@ const ContactCanvas = props => {
           <h6>frontend developer</h6>
           <h5>&lt;/person&gt;</h5>
           <h5 className=''>&lt;contact&gt;</h5>
-          <div className=""> 
-            <a href='mailto:piotrek.gaszczynski@gmail.com'>&lt;mailto=piotrek.gaszczynski@gmail.com&gt;</a>
+          <div className={styles.contact_link}> 
+            <a href='mailto:piotrek.gaszczynski@gmail.com'><i>&lt;mailto=piotrek.gaszczynski@gmail.com&gt;</i></a>
           </div>
-          <div className="">
-            <a href='tel:48605208772'>&lt;callto=(+48)605208772&gt;</a>
+          <div className={styles.contact_link}>
+            <a href='tel:48605208772'><i>&lt;callto=(+48)605208772&gt;</i></a>
           </div>
           <h5>&lt;/contact&gt;</h5>
         </Offcanvas.Body>

@@ -1,4 +1,5 @@
 @import '../../../styles/settings.scss';
+@import '../../../styles/keyframes.scss';
 
 .about_me_page {
   height: 65vh;
@@ -7,7 +8,31 @@
   box-shadow: 0 0 5px 10px $transparent-background;
   border-radius: $radius-base;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+
+  h3, h5 {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  h3 {
+    width: 100%;
+    font-weight: bold;
+    filter: blur(1px);
+  }
+
+  h5 {
+    width: 50%;
+
+    &:first-of-type {
+      animation: about_standby 2s 1s infinite alternate both;
+    }
+
+    &:last-of-type {
+      animation: about_standby 2s 3s infinite alternate both;
+    }
+  }
 }

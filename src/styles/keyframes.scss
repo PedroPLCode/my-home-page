@@ -1,17 +1,17 @@
 @keyframes background_pulse {
-    100% {
-        background: rgba(0, 0, 0, .25);
-    }
-    0% {
-      background: rgba(0, 0, 0, .05);
+  100% {
+    background: rgba(0, 0, 0, .25);
   }
+  0% {
+    background: rgba(0, 0, 0, .05);
   }
+}
 
-  @keyframes background_onHover {
-    0% {
-        background: rgba(0, 0, 0, 0.1);
-    }
+@keyframes background_onHover {
+  0% {
+    background: rgba(0, 0, 0, 0.1);
   }
+}
 
 @keyframes hamburger_hover {
   100% {
@@ -22,9 +22,25 @@
 @keyframes standby {
   100% {
     transform: scale(0.98);
-    }
+  }
+}
+
+@keyframes text_standby {
+  100% {
+    transform: scale(0.95);
+    filter: blur(2px);
+  }
 }
   
+@keyframes about_standby {
+  100% {
+    transform: scale(1.1);
+  }
+  0% {
+    filter: blur(1px);
+  }
+}
+
 @keyframes pulse {
   100% {
     box-shadow: 0 0 10px 5px $color-three;

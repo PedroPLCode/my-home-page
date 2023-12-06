@@ -13,7 +13,7 @@ const Footer = props => {
         <h4 className={clsx(styles.footer__text, props.linkedInIconHover ? styles.footer__text__active : '')}>see.myProfile(LinkedIn);</h4>
         <h4 className={clsx(styles.footer__text, props.githubIconHover ? styles.footer__text__active : '')}>See my GitHub profile</h4>
         <h4 className={clsx(styles.footer__text, props.instagramIconHover ? styles.footer__text__active : '')}>See my Instagram profile</h4>
-        <Link to='https://github.com/PedroPLCode/' 
+        <Link to='https://www.linkedin.com/in/piotr-gaszczynski/' 
               target="_blank" 
               onMouseEnter={props.changeLinkedInTextOn} 
               onMouseLeave={props.changeLinkedInTextOff}>

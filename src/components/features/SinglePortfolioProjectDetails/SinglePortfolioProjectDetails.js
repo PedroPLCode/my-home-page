@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import { projectsDetails, links } from  '../../../settings.js';
+import { projectsDetails } from  '../../../settings.js';
 import clsx from 'clsx';
 import { Container } from 'react-bootstrap';
 import styles from './SinglePortfolioProjectDetails.module.scss';

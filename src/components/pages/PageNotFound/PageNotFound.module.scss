@@ -1,12 +1,19 @@
 @import '../../../styles/settings.scss';
+@import '../../../styles//keyframes.scss';
 
 .page_not_found {
-  height: 75vh;
+  height: 65vh;
   width: 100%;
-  background: rgba(0, 0, 0, 0.75); 
+  background: $transparent-background;
   border-radius: $radius-base;
+  box-shadow: 0 0 5px 10px $transparent-background;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  h3, h5, strong {
+    transform: scale(3);
+    animation: text_standby 5s infinite alternate both;
+  }
 }

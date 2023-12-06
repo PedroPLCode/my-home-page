@@ -6,7 +6,7 @@ const MainPage = () => {
 
   return (
     <div className={clsx(styles.main_page)}>
-      <p>Hi,<br/>I'm Piotr Gaszczyński<br/>Front End Developer<br/>explore my webpage,<br/>explore my portfolio,<br/>and contact me</p>
+      <p>Buenos Dias,<br/>I'm Piotr Gaszczyński<br/>Front End Developer<br/>check my portfolio,<br/>and contact me</p>
     </div>
   );
 }
