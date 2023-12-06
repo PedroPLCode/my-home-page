@@ -10,6 +10,7 @@
   background: none;
   backdrop-filter: brightness(50%);
   box-shadow: 0 0 5px 10px $transparent-background;
+
   &__container {
     height: 100%;
     display: flex;
@@ -18,25 +19,41 @@
     align-items: center;
     gap: $base-size;
   }
+
   &__icon {
     font-size: ($base-size * 3);
     color: $color-three;
-    transition: $transition;
+    transition: $transition-time;
+
     &:hover {
       color: $color-four;
       transform: scale(1.2) rotate(360deg);
       animation: color_change .5s .5s infinite alternate both;
+
+      @media (max-width: $media-border) {
+        animation: none;
+        transform: none;
+        color: $color-three;
+      }
     }
   }
+
   &__text {
     position: absolute;
     opacity: 0;
     color: $color-four;
+    font-weight: bold;
+    filter: blur(1px);
     transform: scale(0.8) translateX(-400px);
-    transition: $transition;
+    transition: $transition-time;
+    
     &__active {
       opacity: 1;
       transform: scale(1) translateX(-160px) translateY(3px);
+
+      @media (max-width: $media-border) {
+        display: none;
+      }
     }
   }
 }

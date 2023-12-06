@@ -17,7 +17,10 @@ const ContactCanvas = props => {
         contact
       </h3>
 
-      <Offcanvas show={show} placement='end' onHide={handleClose} className={styles.offcanvas}>
+      <Offcanvas show={show} placement='end' 
+                 onHide={handleClose} 
+                 className={styles.offcanvas} 
+                 style={{background: 'rgba(0, 0, 0, 0.5)'}}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Contact details</Offcanvas.Title>
         </Offcanvas.Header>

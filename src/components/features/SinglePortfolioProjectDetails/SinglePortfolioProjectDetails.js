@@ -16,6 +16,7 @@ const SinglePortfolioProjectDetails = props => {
       return (
         <div className={styles.wrapper}>
           <div className={styles.iframe_wrapper}>
+            <h3>Loading...<br/>Please wait...</h3>
             <iframe title={SinglePortfolioProject.name} type="text/html" src={SinglePortfolioProject.liveLink} className={styles.iframe}></iframe>
           </div>
           <div className={styles.project_details}>

@@ -6,13 +6,11 @@ $color-one: #010d80;
 $color-two: #178ea3;
 $color-three: #972297;
 $color-four: #e1644e;
+$color-black: rgb(0, 0, 0);
 
 $transparent-background: rgba(0, 0, 0, 0.5);
 
 $background-image: url(../images/bkgr_large.jpg);
-@media (max-width: $media-border) {
-  $background-image: url(../images/bkgr_small.jpg);
-}
 
 $font-pixelify: 'Pixelify Sans', cursive;
 $font-roboto: 'Roboto', sans-serif;
@@ -23,4 +21,7 @@ $base-size: 12px;
 $border-size: 3px;
 
 $transition-time: 0.5s;
-$transition: .5s all;
+
+@media (max-width: $media-border) {
+  $background-image: url(../images/bkgr_small.jpg);
+}

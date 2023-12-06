@@ -31,13 +31,18 @@
     filter: blur(2px);
   }
 }
+
+@keyframes please_wait {
+  100% {
+    transform: scale(1.5);
+  }
+}
   
 @keyframes about_standby {
   100% {
-    transform: scale(1.1);
   }
   0% {
-    filter: blur(1px);
+    filter: blur(2px);
   }
 }
 

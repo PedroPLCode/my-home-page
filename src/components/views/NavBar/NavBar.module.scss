@@ -5,6 +5,7 @@
   background: none;
   backdrop-filter: brightness(50%);
   box-shadow: 0 0 5px 10px $transparent-background;
+  
   &__container {
     display: flex;
     flex-direction: row;

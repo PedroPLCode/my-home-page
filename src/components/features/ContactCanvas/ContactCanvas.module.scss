@@ -45,6 +45,7 @@
   flex-direction: row;
   justify-content: end;
   align-items: center;
+
   &__link {
     margin: auto;
     margin-right: 0;
@@ -60,10 +61,11 @@
     animation: standby 1s 1s infinite alternate both;
     transition-duration: $transition-time;
     transition-property: background-color, background-position, color;
+
       &:hover {
       cursor: pointer;
       background-color: $color-three;
-      color: rgba(0, 0, 0, 1);        
+      color: rgba($color-black, 1);        
       background-position: 0 100%;
       animation: pulse .5s .5s infinite alternate both;
     }

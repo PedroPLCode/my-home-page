@@ -10,7 +10,7 @@ const Footer = props => {
   return (
     <MDBFooter className={styles.footer}>
       <MDBContainer className={styles.footer__container}>
-        <h4 className={clsx(styles.footer__text, props.linkedInIconHover ? styles.footer__text__active : '')}>see.myProfile(LinkedIn);</h4>
+        <h4 className={clsx(styles.footer__text, props.linkedInIconHover ? styles.footer__text__active : '')}>See my LinkedIn profile</h4>
         <h4 className={clsx(styles.footer__text, props.githubIconHover ? styles.footer__text__active : '')}>See my GitHub profile</h4>
         <h4 className={clsx(styles.footer__text, props.instagramIconHover ? styles.footer__text__active : '')}>See my Instagram profile</h4>
         <Link to='https://www.linkedin.com/in/piotr-gaszczynski/' 

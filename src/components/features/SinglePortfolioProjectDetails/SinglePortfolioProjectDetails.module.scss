@@ -7,14 +7,13 @@
   padding: calc($base-size * 1);
   border-radius: $radius-base;
   background: $transparent-background;
-  /* animation: background_pulse 3s 3s infinite alternate both; */
   box-shadow: 0 0 5px 10px $transparent-background;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: $base-size;
-  transition: $transition;
+  gap: ($base-size * 1.5);
+  transition: $transition-time;
 
   @media (max-width: 960px) {
     flex-direction: column;
@@ -31,11 +30,17 @@
     padding: $base-size;
     position: relative;
 
-    @media (max-width: 960px) {
+    @media (max-width: $media-border) {
       flex-direction: row;
       height: 50%;
       width: 100%;
       padding-bottom: 0px;
+    }
+
+    h3 {
+      font-weight: bold;
+      text-align: center;
+      animation: please_wait 1s infinite alternate both;
     }
 
     .iframe {
@@ -43,7 +48,7 @@
       width: 200%;
       height: 200%;
       transform: scale(0.5, 0.5);
-      border-radius: calc($radius-base * 2);
+      border-radius: calc($radius-base * 3);
       overflow: hidden;
       -ms-overflow-style: none;  /* IE and Edge */
       scrollbar-width: none;  /* Firefox */
@@ -52,7 +57,7 @@
         display: none;
       }
 
-      @media (max-width: 960px) {
+      @media (max-width: $media-border) {
         height: 400%;
         width: 400%;
         transform: scale(0.25, 0.25);
@@ -64,22 +69,23 @@
   .project_details {
     height: 100%;
     width: 40%;
-    transition: $transition;
+    transition: $transition-time;
     border-radius: $radius-base;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: space-between;
-    transition: $transition;
+    transition: $transition-time;
 
     h3 {
       text-align: center;
     }
 
-    @media (max-width: 960px) {
+    @media (max-width: $media-border) {
       height: 50%;
       width: 100%;      
-      margin-left: $base-size * 2;
+      margin-top: $base-size;
+      margin-left: 0px;
       margin-right: 0px;
       padding-right: 0px;
     }
@@ -94,7 +100,7 @@
 
       a {
         color: $color-three;
-        margin: calc($base-size / 2) 0 calc($base-size / 2) 0;
+        margin: 0;
         height: $base-size * 4;
         width: 100%;
         padding: $base-size;
@@ -103,28 +109,41 @@
         font-weight: bold;
         border: 3px solid $color-three;
         border-radius: $radius-base;
-        background-image: linear-gradient(90deg, $color-three 50% , rgba(0, 0, 0, 0) 50%);
+        background-image: linear-gradient(90deg, $color-three 50% , rgba($color-black, 0) 50%);
         background-position: 100% 0;
         background-size: 300% 300%;
-        /* animation: standby .5s .5s infinite alternate both; */
         transition-property: background-position, color, text-shadow, box-shadow;
         transition-duration: $transition-time;
 
+        @media (max-width: $media-border) {
+          background-position: 0 100%;
+          color: rgba($color-black, 1);
+          animation: pulse 1s 1s infinite alternate both;
+        }
+
       &:first-of-type {
-  
+        @media (max-width: $media-border) {
+          animation: none;
+        }
       }
 
       &:hover {
         cursor: pointer;
         background-position: 0 100%;
-        color: rgba(0, 0, 0, 1);
+        color: rgba($color-black, 1);
         animation: pulse 1s 1s infinite alternate both;
+
+        @media (max-width: $media-border) {
+          background-position: 0 100%;
+          color: rgba($color-black, 1);
+          animation: pulse 1s 1s infinite alternate both;
+        }
         }
       }
     }
 
     .text {
-      transition: $transition;
+      transition: $transition-time;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -132,6 +151,10 @@
 
       h3 {
         font-weight: bold;
+
+        @media (max-width: $media-border) {
+          font-size: $base-size * 1.5;
+        }
       }
     }
   }  

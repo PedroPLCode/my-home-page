@@ -31,12 +31,14 @@
   
   .bar1 {
     transform: translateY(-4px);
+
     &.change {
       transform: translateY(4px) rotateZ(-405deg);
     }
   }
 
   .bar2 {
+
     &.change {
       opacity: 0;
     }
@@ -44,6 +46,7 @@
   
   .bar3 {
     transform: translateY(4px);
+
     &.change {
       transform: translateY(-6px) rotateZ(45deg);    }
   }
@@ -53,16 +56,24 @@
     transition-property: transform;
     transform: rotate(45deg) scale(0);
     background: none;
+
     &.change {
       transform: rotate(0deg) scale(1);
+
       div {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         a {
           font-weight: bold;
-          color: red;
+          transition-duration: $transition-time;
+          transition-property: color;
+
+          &:hover {
+            color: $color-four;
+          }
         }
       }
     }
@@ -83,9 +94,6 @@
     border-radius: 50%;
     box-shadow: 0 0 5px 10px $transparent-background;
     transition-duration: $transition-time;
-    &:hover {
-      
-    }
   }
   
   .change .bar {
@@ -104,9 +112,11 @@
     font-size: ($base-size * 1.6);
     transition-duration: $transition-time;
     transition-property: transform, font-weight;
+
     &:hover {
       transform: scale(1.2);
     }
+    
     &.active {
       font-weight: bold;
     }

@@ -1,7 +1,7 @@
 @import '../../../styles/settings.scss';
 @import '../../../styles//keyframes.scss';
 
-.main_page {
+.main__page {
   height: 65vh;
   width: 100%;
   background: $transparent-background;
@@ -11,10 +11,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: $media-border) {
+    width: 80%;
+  }
+
   p {
     font-size: $base-size * 3;
     font-weight: bold;
     text-align: center;
     animation: text_standby 2s infinite alternate both;
+
+    @media (max-width: $media-border) {
+      font-size: $base-size * 2;
+    }
   }
 }
