@@ -26,6 +26,7 @@ main {
   transition-timing-function: linear;
 
   .containter_background {
+    max-width: 1024px;
     position: relative;
     z-index: 0;
     height: calc(100% - $base-size * 12);
