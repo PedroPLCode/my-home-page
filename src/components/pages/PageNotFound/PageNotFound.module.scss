@@ -12,8 +12,18 @@
   justify-content: center;
   align-items: center;
 
-  h3, h5, strong {
-    transform: scale(3);
-    animation: text_standby 5s infinite alternate both;
+  @media (max-width: $media-border) {
+    width: 80%;
+  }
+
+  h3, h5 {
+    font-size: calc($base-size * 4);
+    text-align: center;
+    animation: text_standby .5s infinite alternate both;
+  }
+
+  strong {
+    font-size: calc($base-size * 3);
+    text-align: center;
   }
 }

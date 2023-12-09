@@ -55,35 +55,35 @@ const App = () => {
       <NavBar setShowNavMenu={setShowNavMenu} 
               closeHamburger={closeHamburger} 
               showNavMenu={showNavMenu} />
-        <Container className='containter_background'>
-          <div className='main_background'>
-            <h2>&lt;piotr.gaszczyński&gt;</h2>
-            <h2>&lt;/frontend developer&gt; </h2>
-          </div>
-          <div
-            className={clsx(`${transitionStage}`, 'main_content')}
-            onAnimationEnd={() => {
-              if (transitionStage === "fadeOut") {
-                setTransistionStage("fadeIn");
-                setDisplayLocation(location);
-              }
-            }}
-          > 
-            <Routes location={displayLocation}>
-              <Route path="/" element={<MainPage />} />
-              <Route path="/about" element={<AboutMePage />} />
-              <Route path="/portfolio" element={<PortfolioPage 
-                     setShowNavMenu={setShowNavMenu} 
-                     closeHamburger={closeHamburger} 
-                     showNavMenu={showNavMenu} />} />
-              <Route path="/portfolio/:projectId" element={<SinglePortfolioProjectDetails 
-                     setShowNavMenu={setShowNavMenu} 
-                     closeHamburger={closeHamburger} 
-                     showNavMenu={showNavMenu} />} />
-              <Route path="*" element={<PageNotFound />} />
-            </Routes>
-          </div>
-        </Container>
+      <Container className='containter_background'>
+        <div className='main_background'>
+          <h2>&lt;piotr.gaszczyński&gt;</h2>
+          <h2>&lt;/frontend developer&gt; </h2>
+        </div>
+        <div
+          className={clsx(`${transitionStage}`, 'main_content')}
+          onAnimationEnd={() => {
+            if (transitionStage === "fadeOut") {
+              setTransistionStage("fadeIn");
+              setDisplayLocation(location);
+            }
+          }}
+        > 
+          <Routes location={displayLocation}>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/about" element={<AboutMePage />} />
+            <Route path="/portfolio" element={<PortfolioPage 
+                   setShowNavMenu={setShowNavMenu} 
+                   closeHamburger={closeHamburger} 
+                   showNavMenu={showNavMenu} />} />
+            <Route path="/portfolio/:projectId" element={<SinglePortfolioProjectDetails 
+                   setShowNavMenu={setShowNavMenu} 
+                   closeHamburger={closeHamburger} 
+                   showNavMenu={showNavMenu} />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+        </div>
+      </Container>
       <Footer changeLinkedInTextOn={changeLinkedInTextOn}
               changeLinkedInTextOff={changeLinkedInTextOff}
               linkedInIconHover={linkedInIconHover}

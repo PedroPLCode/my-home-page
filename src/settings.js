@@ -36,7 +36,16 @@ export const projectsDetails =  [
     liveLink: 'https://project-224038.kodilla.com/'
   },
   {
-    link: 'optima', // REPLIT FAILED
+    link: 'rockpaperscissors', //OK
+    name: 'Rock Paper Scissors Game',
+    techs: 'JavaScript HTML CSS RWD',
+    desc: 'Simple Rock Paper Scissors game.',
+    image: 'game.png',
+    gitHubLink: 'https://github.com/PedroPLCode/4.javascript-prework.git',
+    liveLink: 'https://project-223733.kodilla.com/'
+  },
+  {
+    link: 'optima', // ZROBIĆ. OPTIMA ROPE ACCESS
     name: 'Webpage',
     techs: 'JavaScript React Redux HTML CSS',
     desc: 'Short description',
@@ -45,22 +54,13 @@ export const projectsDetails =  [
     liveLink: 'https://11first-react-app.pedroplcode.repl.co'
   },
     {
-    link: 'zlasuceramika', //OK
+    link: 'zlasuceramika', // ZROBIĆ
     name: 'Webpage',
     techs: 'HTML CSS RWD',
     desc: 'Simple webpage',
     image: 'ceramika.png',
     gitHubLink: 'https://github.com/PedroPLCode/1.creatively.git',
     liveLink: 'https://project-223286.kodilla.com/'
-  },
-    {
-    link: 'rockpaperscissors', //OK
-    name: 'Rock Paper Scissors Game',
-    techs: 'JavaScript HTML CSS RWD',
-    desc: 'Simple Rock Paper Scissors game.',
-    image: 'game.png',
-    gitHubLink: 'https://github.com/PedroPLCode/4.javascript-prework.git',
-    liveLink: 'https://project-223733.kodilla.com/'
   },
 ]
 

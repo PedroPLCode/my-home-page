@@ -8,7 +8,7 @@ const PortfolioList = props => {
   return (      
     <ul>
       {projectsDetails.map(project => 
-        <li>
+        <li key={project.link}>
           <div>
             <SinglePortfolioProjectOverview key={project.name}
                                             link={project.link}
@@ -20,7 +20,7 @@ const PortfolioList = props => {
                                             liveLink={project.livelink} 
                                             setShowNavMenu={props.setShowNavMenu} closeHamburger={props.closeHamburger} showNavMenu={props.showNavMenu}
                                             />
-            </div>
+          </div>
         </li>
       )}
         <li className={styles.last} onClick={props.closeHamburger} >

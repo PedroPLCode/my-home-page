@@ -121,23 +121,23 @@
           animation: pulse 1s 1s infinite alternate both;
         }
 
-      &:first-of-type {
-        @media (max-width: $media-border) {
-          animation: none;
+        &:first-of-type {
+          @media (max-width: $media-border) {
+            animation: none;
+          }
         }
-      }
 
-      &:hover {
-        cursor: pointer;
-        background-position: 0 100%;
-        color: rgba($color-black, 1);
-        animation: pulse 1s 1s infinite alternate both;
-
-        @media (max-width: $media-border) {
+        &:hover {
+          cursor: pointer;
           background-position: 0 100%;
           color: rgba($color-black, 1);
           animation: pulse 1s 1s infinite alternate both;
-        }
+
+          @media (max-width: $media-border) {
+            background-position: 0 100%;
+            color: rgba($color-black, 1);
+            animation: pulse 1s 1s infinite alternate both;
+          }
         }
       }
     }
@@ -158,4 +158,45 @@
       }
     }
   }  
+
+  .project_not_found {
+    height: 100%;
+    width: 100%;
+    transition: $transition-time;
+    border-radius: $radius-base;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: $transition-time;
+
+    a {
+      color: $color-three;
+      margin: 0;
+      height: $base-size * 4;
+      width: 100%;
+      padding: $base-size;
+      margin-bottom: $base-size;
+      border-radius: $radius-base;
+      text-align: center;
+      font-weight: bold;
+      border: 3px solid $color-three;
+      border-radius: $radius-base;
+      background-image: linear-gradient(90deg, $color-three 50% , rgba($color-black, 0) 50%);
+      background-position: 100% 0;
+      background-size: 300% 300%;
+      transition-property: background-position, color, text-shadow, box-shadow;
+      transition-duration: $transition-time;
+
+      @media (max-width: $media-border) {
+        background-position: 0 100%;
+        color: rgba($color-black, 1);
+        animation: pulse 1s 1s infinite alternate both;
+      }
+    }
+
+    h3, strong {
+      text-align: center;
+    }
+  }
 }

@@ -45,13 +45,13 @@ const SinglePortfolioProjectDetails = props => {
   }
   if (!projectFound) {
     return (
-      <Container className={clsx(styles.wrapper)}>
-        <div className={clsx(styles.project_details)}>
+      <div className={clsx(styles.wrapper)}>
+        <div className={clsx(styles.project_not_found)}>
           <Link to='/portfolio' >back</Link>
           <h3>PROJECT NOT FOUND</h3>
           <strong>Looks like, project you are trying to open is not here anymore..</strong>
         </div>
-        </Container>
+      </div>
     );
   }
 }

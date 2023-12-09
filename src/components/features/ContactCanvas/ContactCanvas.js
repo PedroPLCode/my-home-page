@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import styles from './ContactCanvas.module.scss';
+import { TelephoneFill, EnvelopeFill } from 'react-bootstrap-icons';
 
 const ContactCanvas = props => {
   
@@ -20,21 +21,32 @@ const ContactCanvas = props => {
       <Offcanvas show={show} placement='end' 
                  onHide={handleClose} 
                  className={styles.offcanvas} 
-                 style={{background: 'rgba(0, 0, 0, 0.5)'}}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Contact details</Offcanvas.Title>
+                 style={{background: 'rgba(0, 0, 0, 0.75)'}}>
+        <Offcanvas.Header className={styles.offcanvas_header}>
+          <Offcanvas.Title className={styles.offcanvas_title}>Contact details</Offcanvas.Title>
+          <div className={styles.btn_close}>
+            <h3 onClick={handleClose} className={styles.contact__link}>
+              close
+            </h3>
+          </div>
         </Offcanvas.Header>
-        <Offcanvas.Body className=''>
+        <Offcanvas.Body className={styles.offcancas_body}>
           <h5>&lt;person&gt;</h5>
           <h6>piotr gaszczyński</h6>
           <h6>frontend developer</h6>
           <h5>&lt;/person&gt;</h5>
-          <h5 className=''>&lt;contact&gt;</h5>
+          <h5>&lt;contact&gt;</h5>
           <div className={styles.contact_link}> 
-            <a href='mailto:piotrek.gaszczynski@gmail.com'><i>&lt;mailto=piotrek.gaszczynski@gmail.com&gt;</i></a>
+            <a href='mailto:piotrek.gaszczynski@gmail.com'>
+              <EnvelopeFill className={styles.envelope} />
+              <i>piotrek.gaszczynski@gmail.com</i>
+            </a>
           </div>
           <div className={styles.contact_link}>
-            <a href='tel:48605208772'><i>&lt;callto=(+48)605208772&gt;</i></a>
+            <a href='tel:48605208772'>
+              <TelephoneFill className={styles.telephone} />
+              <i>+48 605208772</i>
+            </a>
           </div>
           <h5>&lt;/contact&gt;</h5>
         </Offcanvas.Body>

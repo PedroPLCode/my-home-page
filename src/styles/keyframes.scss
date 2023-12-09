@@ -40,6 +40,7 @@
   
 @keyframes about_standby {
   100% {
+    color: $color-four;
   }
   0% {
     filter: blur(2px);
