@@ -53,11 +53,12 @@
       font-size: calc($base-size * 1.5);
 
       &:first-of-type {
-        margin-top: $base-size;
+        margin-top: calc($base-size * 4);
         margin-bottom: $base-size;
       }
 
       &:last-of-type {
+        margin-top: calc($base-size * 2);
         margin-bottom: $base-size;
       }
   
@@ -69,7 +70,7 @@
 
         .envelope, .telephone {
           color: $color-two;
-          margin-bottom: $base-size;
+          margin-bottom: calc($base-size / 2);
           font-size: calc($base-size * 5);
           transition-duration: $transition-time;
           transition-property: color, transform;

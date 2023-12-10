@@ -21,7 +21,7 @@ const ContactCanvas = props => {
       <Offcanvas show={show} placement='end' 
                  onHide={handleClose} 
                  className={styles.offcanvas} 
-                 style={{background: 'rgba(0, 0, 0, 0.75)'}}>
+                 style={{background: 'rgba(0, 0, 0, 0.5)'}}>
         <Offcanvas.Header className={styles.offcanvas_header}>
           <Offcanvas.Title className={styles.offcanvas_title}>Contact details</Offcanvas.Title>
           <div className={styles.btn_close}>
@@ -35,7 +35,6 @@ const ContactCanvas = props => {
           <h6>piotr gaszczyński</h6>
           <h6>frontend developer</h6>
           <h5>&lt;/person&gt;</h5>
-          <h5>&lt;contact&gt;</h5>
           <div className={styles.contact_link}> 
             <a href='mailto:piotrek.gaszczynski@gmail.com'>
               <EnvelopeFill className={styles.envelope} />
@@ -48,7 +47,6 @@ const ContactCanvas = props => {
               <i>+48 605208772</i>
             </a>
           </div>
-          <h5>&lt;/contact&gt;</h5>
         </Offcanvas.Body>
       </Offcanvas>
     </div>

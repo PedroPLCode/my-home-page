@@ -15,7 +15,7 @@
   gap: ($base-size * 1.5);
   transition: $transition-time;
 
-  @media (max-width: 960px) {
+  @media (max-width: $media-border) {
     flex-direction: column;
     width: 80%;
   }
@@ -115,7 +115,10 @@
         transition-property: background-position, color, text-shadow, box-shadow;
         transition-duration: $transition-time;
 
+
+
         @media (max-width: $media-border) {
+          font-size: $base-size * 1;
           background-position: 0 100%;
           color: rgba($color-black, 1);
           animation: pulse 1s 1s infinite alternate both;

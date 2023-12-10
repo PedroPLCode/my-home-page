@@ -17,6 +17,10 @@
     width: 80%;
   }
 
+  @media (min-width: $media-border) and (max-width: $media-border-big) {
+    width: 90%;
+  }
+
   h3, h5 {
     font-weight: bold;
   }

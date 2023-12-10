@@ -16,6 +16,11 @@
     width: 80%;
   }
 
+  @media (min-width: $media-border) and (max-width: $media-border-big) {
+    width: 90%;
+  }
+
+
   p {
     font-size: $base-size * 3;
     font-weight: bold;

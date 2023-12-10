@@ -43,7 +43,7 @@ const SinglePortfolioProjectOverview = props => {
 
   return (
     <Link to={props.link}
-          style={{backgroundImage: isHover || window.screen.width <= 920 ? `url(${background})` : ''}} 
+          style={{backgroundImage: (window.innerWidth <= 1148) || isHover ? `url(${background})` : ''}} 
           className={styles.project__overview} onClick={props.closeHamburger}
           onMouseEnter={hoverOn} 
           onMouseLeave={hoverOut} >

@@ -53,8 +53,8 @@ main {
         text-shadow: 4px 8px 4px $color-one;
         height: auto;
 
-        @media (max-width: $media-border) {
-          font-size: $base-size * 2;
+        @media (max-width: $media-border-big) {
+          display: none;
         }
       }
     }
