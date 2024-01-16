@@ -11,6 +11,10 @@
   backdrop-filter: brightness(50%);
   box-shadow: 0 0 5px 10px $transparent-background;
 
+  @media (max-width: $media-border) and (orientation: landscape) {
+    height: $base-size * 4;
+  }
+
   &__container {
     height: 100%;
     display: flex;

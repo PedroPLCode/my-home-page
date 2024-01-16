@@ -13,9 +13,15 @@
     transition-duration: $transition-time;
     transition-property: background-color;
     
-    &:hover .bar {
-      background-color: $color-four;
-      animation: 1s .2s hamburger_hover infinite alternate both;
+    @media (hover) {
+      &:hover .bar {
+        background-color: $color-four;
+        animation: 1s .2s hamburger_hover infinite alternate both;
+      }
+    }
+
+    @media (max-width: $media-border) and (orientation: landscape) {
+
     }
   }
   

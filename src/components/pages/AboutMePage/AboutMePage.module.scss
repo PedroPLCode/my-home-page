@@ -23,6 +23,10 @@
 
   h3, h5 {
     font-weight: bold;
+
+    @media (max-width: $media-border) and (orientation: landscape) {
+
+    }
   }
 
   h3 {
