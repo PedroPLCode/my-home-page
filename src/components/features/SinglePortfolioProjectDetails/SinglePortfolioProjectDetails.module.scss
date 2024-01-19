@@ -20,6 +20,11 @@
     width: 80%;
   }
 
+  @media (max-width: $media-border) and (orientation: landscape) {
+    height: 60dvh;
+    flex-direction: row;
+  }
+
   .iframe_wrapper {
     height: 100%;
     width: 60%;
@@ -35,6 +40,11 @@
       height: 50%;
       width: 100%;
       padding-bottom: 0px;
+    }
+
+    @media (max-width: $media-border) and (orientation: landscape) {
+      height: 100%;
+      padding: 0px;
     }
 
     h3 {
@@ -88,6 +98,12 @@
       margin-left: 0px;
       margin-right: 0px;
       padding-right: 0px;
+    }
+
+    @media (max-width: $media-border) and (orientation: landscape) {
+      height: 100%;
+      padding: 0px;
+      margin-top: 0px;
     }
 
     .buttons {
@@ -157,6 +173,10 @@
 
         @media (max-width: $media-border) {
           font-size: $base-size * 1.5;
+        }
+
+        @media (max-width: $media-border) and (orientation: landscape) {
+          font-size: $base-size ;
         }
       }
     }

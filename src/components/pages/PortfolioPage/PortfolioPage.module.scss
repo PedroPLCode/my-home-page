@@ -7,4 +7,8 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: $media-border) and (orientation: landscape) {
+    height: 60vh;
+  }
 }

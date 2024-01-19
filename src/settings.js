@@ -1,29 +1,29 @@
 export const projectsDetails =  [
   {
     link: 'foodapp', // OK
-    name: 'Food Search App',
-    techs: 'JavaScript React Redux HTML CSS',
+    name: 'Receipes Search App',
+    techs: 'JavaScript React Redux HTML CSS RWD',
     desc: 'Small App to looking for new meal recipes.',
     image: 'food.png',
-    gitHubLink: 'https://github.com/PedroPLCode/16.waiter-app.git',
-    liveLink: 'https://food.zlasuceramika.pl'
+    gitHubLink: 'https://github.com/PedroPLCode/food-search-app',
+    liveLink: 'http://receipes.blackzebra.pl/'
   },
   {
     link: 'waiter', // REPLIT FAILED
     name: 'Waiter App',
     techs: 'JavaScript React Redux HTML CSS',
-    desc: 'Small App for table managment in restaurant, updating tables status.',
+    desc: 'Small App for table managment in restaurant, updating tables status. Hosted on Replit - please be patient.',
     image: 'waiter.png',
-    gitHubLink: 'https://github.com/PedroPLCode/16.waiter-app.git',
+    gitHubLink: 'https://github.com/PedroPLCode/16.waiter-app',
     liveLink: 'https://16waiter-app.pedroplcode.repl.co'
   },
     {
     link: 'pizzeria', // UPDATE REPLIT
     name: 'Pizzeria App',
     techs: 'JavaScript HTML CSS',
-    desc: 'App for pizzeria menagenent - online booking a tables and making orders',
+    desc: 'App for pizzeria management - online booking a tables and making orders. Hosted on Replit - please be patient.',
     image: 'pizzeria.png',
-    gitHubLink: 'https://github.com/PedroPLCode/7.project-pizzeria.git',
+    gitHubLink: 'https://github.com/PedroPLCode/7.project-pizzeria',
     liveLink: 'https://7project-pizzeria.pedroplcode.repl.co'
   },
   {
@@ -32,12 +32,12 @@ export const projectsDetails =  [
     techs: 'JavaScript HTML CSS RWD',
     desc: 'Blog App with filtering articles by #authors and #tags',
     image: 'blog.png',
-    gitHubLink: 'https://github.com/PedroPLCode/5.javascript-blog.git',
-    liveLink: 'https://project-224038.kodilla.com/'
+    gitHubLink: 'https://github.com/PedroPLCode/5.javascript-blog',
+    liveLink: 'http://javascriptblog.blackzebra.pl/'
   },
   {
     link: 'rockpaperscissors', //OK
-    name: 'Rock Paper Scissors Game',
+    name: 'zlasuceramika.pl',
     techs: 'JavaScript HTML CSS RWD',
     desc: 'Simple Rock Paper Scissors game.',
     image: 'game.png',
@@ -46,7 +46,7 @@ export const projectsDetails =  [
   },
   {
     link: 'optima', // ZROBIĆ. OPTIMA ROPE ACCESS
-    name: 'Webpage',
+    name: 'ropeaccess.pro',
     techs: 'JavaScript React Redux HTML CSS',
     desc: 'Short description',
     image: 'optima.png',
@@ -55,7 +55,7 @@ export const projectsDetails =  [
   },
     {
     link: 'zlasuceramika', // ZROBIĆ
-    name: 'Webpage',
+    name: 'blackzebra.pl',
     techs: 'HTML CSS RWD',
     desc: 'Simple webpage',
     image: 'ceramika.png',

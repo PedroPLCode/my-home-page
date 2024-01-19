@@ -1,19 +1,17 @@
 @import '../../../styles/settings.scss';
 
 .nav {
-  height: $base-size * 6;
+  height: $base-size * 4;
   background: none;
   backdrop-filter: brightness(50%);
   box-shadow: 0 0 5px 10px $transparent-background;
-
-  @media (max-width: $media-border) and (orientation: landscape) {
-    height: $base-size * 4;
-  }
   
   &__container {
+    height: 100%;
+    transform: translateY(5px);
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
   }
 }

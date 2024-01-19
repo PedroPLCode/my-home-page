@@ -21,11 +21,15 @@
     width: 90%;
   }
 
+  @media (max-width: $media-border) and (orientation: landscape) {
+    height: 50vh;
+  }
+
   h3, h5 {
     font-weight: bold;
 
     @media (max-width: $media-border) and (orientation: landscape) {
-
+      font-size: 2dvw;
     }
   }
 
@@ -36,11 +40,20 @@
     padding-top: $radius-base * 9;
     font-weight: bold;
     filter: blur(1px);
+
+    @media (max-width: $media-border) and (orientation: landscape) {
+      padding-top: 0;
+      height: 5%;
+    }
   }
 
   h5 {
     width: 49%;
     height: 80%;
+
+    @media (max-width: $media-border) and (orientation: landscape) {
+      font-size: 1.5dvw;
+    }
 
     &:first-of-type {
       text-align: right;

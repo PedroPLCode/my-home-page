@@ -34,6 +34,10 @@
     h5, h6 {
       text-align: center;
 
+      @media (max-width: $media-border-medium) and (orientation: landscape) {
+        font-size: 4vh;
+      }
+
       &:nth-of-type(3) {
         margin-top: calc($base-size * 3);
         margin-bottom: 0px;
@@ -55,11 +59,19 @@
       &:first-of-type {
         margin-top: calc($base-size * 4);
         margin-bottom: $base-size;
+
+        @media (max-width: $media-border-medium) and (orientation: landscape) {
+          margin: $base-size;
+        }
       }
 
       &:last-of-type {
         margin-top: calc($base-size * 2);
         margin-bottom: $base-size;
+
+        @media (max-width: $media-border-medium) and (orientation: landscape) {
+          margin: $base-size;
+        }
       }
   
       a {
@@ -80,10 +92,16 @@
             transform: scale(1.2);
           }
 
-          &:hover {
-            cursor: pointer;
-            color: $color-four;
-            transform: rotate(360deg) scale(1.2);
+          @media (max-width: $media-border-medium) and (orientation: landscape) {
+            font-size: 5vh;
+          }
+
+          @media (hover) {
+            &:hover {
+              cursor: pointer;
+              color: $color-four;
+              transform: rotate(360deg) scale(1.2);
+            }
           }
         }
   
@@ -95,8 +113,10 @@
             color: $color-four;
           }
   
-          &:hover {
-            cursor: pointer;
+          @media (hover) {
+            &:hover {
+              cursor: pointer;
+            }
           }
         }
       }
@@ -127,12 +147,14 @@
     transition-duration: $transition-time;
     transition-property: background-color, background-position, color;
 
+    @media (hover) {
       &:hover {
-      cursor: pointer;
-      background-color: $color-three;
-      color: rgba($color-black, 1);        
-      background-position: 0 100%;
-      animation: pulse .5s .5s infinite alternate both;
+        cursor: pointer;
+        background-color: $color-three;
+        color: rgba($color-black, 1);        
+        background-position: 0 100%;
+        animation: pulse .5s .5s infinite alternate both;
+      }
     }
   }  
 }

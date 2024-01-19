@@ -2,7 +2,7 @@
 @import '../../../styles//keyframes.scss';
 
 .main__page {
-  height: 65dvh;
+  height: 65vh;
   width: 100%;
   background: $transparent-background;
   box-shadow: 0 0 5px 10px $transparent-background;
@@ -21,7 +21,7 @@
   }
 
   @media (max-width: $media-border) and (orientation: landscape) {
-    height: 50%;
+    height: 50vh;
   }
 
   p {
